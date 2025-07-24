@@ -1,4 +1,3 @@
-
 body {
   font-family: 'Inter', sans-serif;
   background: #fff;
@@ -68,7 +67,7 @@ footer {
   h2 { font-size: 1.5rem; }
 }
 
-/* BEFORE-AFTER SLIDER ARROWS */
+/* BEFORE‑AFTER SLIDER ARROWS */
 .ba-slider::before, .ba-slider::after {
   content: '';
   position: absolute;
@@ -80,12 +79,10 @@ footer {
   border-width: 0 2px 2px 0;
   padding: 4px;
 }
-
 .ba-slider::before {
   left: -16px;
   transform: translateY(-50%) rotate(135deg);
 }
-
 .ba-slider::after {
   right: -16px;
   transform: translateY(-50%) rotate(-45deg);
@@ -109,7 +106,6 @@ footer {
   text-transform: uppercase;
   text-align: center;
 }
-
 .grid-item:hover .overlay-text {
   opacity: 1;
 }

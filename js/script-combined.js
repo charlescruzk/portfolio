@@ -1,0 +1,115 @@
+/*
+ * Combined script to enable both a Lightbox preview and a before–after
+ * slider on the same page. This single file merges the behaviour of the
+ * original script.js (for the before–after slider) and script‑v2.js
+ * (for the lightbox). It should be loaded after the DOM has been
+ * constructed (typically at the end of the body). All event handlers
+ * are attached within a single DOMContentLoaded callback to ensure
+ * proper initialisation.
+ */
+document.addEventListener("DOMContentLoaded", function () {
+  /* Lightbox functionality */
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxCaption = document.getElementById("lightbox-caption");
+  const closeBtn = document.querySelector(".close");
+  const gridImages = document.querySelectorAll(".grid-item img");
+
+  let currentIndex = 0;
+
+  function openLightbox(index) {
+    const img = gridImages[index];
+    // Display the overlay and update the image source and alt text
+    lightbox.style.display = "flex";
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    if (lightboxCaption) {
+      lightboxCaption.textContent = img.alt || "";
+    }
+    currentIndex = index;
+  }
+
+  // Attach click listeners to each grid image to open the lightbox
+  gridImages.forEach((img, index) => {
+    img.addEventListener("click", () => openLightbox(index));
+  });
+
+  // Close button hides the lightbox and clears its contents
+  closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+    lightboxImg.src = "";
+    if (lightboxCaption) {
+      lightboxCaption.textContent = "";
+    }
+  });
+
+  // Clicking on the backdrop (but not the image) closes the lightbox
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+      lightboxImg.src = "";
+      if (lightboxCaption) {
+        lightboxCaption.textContent = "";
+      }
+    }
+  });
+
+  // Keyboard navigation: arrow keys to navigate, escape to close
+  document.addEventListener("keydown", (e) => {
+    if (lightbox.style.display === "flex") {
+      if (e.key === "ArrowRight") {
+        currentIndex = (currentIndex + 1) % gridImages.length;
+        openLightbox(currentIndex);
+      } else if (e.key === "ArrowLeft") {
+        currentIndex = (currentIndex - 1 + gridImages.length) % gridImages.length;
+        openLightbox(currentIndex);
+      } else if (e.key === "Escape") {
+        lightbox.style.display = "none";
+        lightboxImg.src = "";
+        if (lightboxCaption) {
+          lightboxCaption.textContent = "";
+        }
+      }
+    }
+  });
+
+  /* Before–After slider functionality */
+  document.querySelectorAll('.ba-container').forEach(container => {
+    const afterImage = container.querySelectorAll('img')[1];
+    const slider = container.querySelector('.ba-slider');
+
+    const updateSlider = (x) => {
+      const rect = container.getBoundingClientRect();
+      let offsetX = x - rect.left;
+      // Ensure the slider remains within the container bounds
+      offsetX = Math.max(0, Math.min(offsetX, rect.width));
+      const percent = (offsetX / rect.width) * 100;
+      // Adjust the visible portion of the after image via clip‑path
+      afterImage.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+      slider.style.left = `${percent}%`;
+    };
+
+    let isDragging = false;
+
+    container.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      updateSlider(e.clientX);
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (isDragging) updateSlider(e.clientX);
+    });
+
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+
+    container.addEventListener('touchstart', (e) => {
+      updateSlider(e.touches[0].clientX);
+    });
+
+    container.addEventListener('touchmove', (e) => {
+      updateSlider(e.touches[0].clientX);
+    });
+  });
+});
