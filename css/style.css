@@ -66,3 +66,36 @@ footer {
     border: 1px solid #ddd;
     border-radius: 4px;
 }
+
+/* Before/After Slider */
+.before-after {
+  margin-top: 80px;
+}
+.ba-slider {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.ba-wrapper {
+  position: relative;
+}
+.ba-wrapper img {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ba-wrapper img:first-child {
+  position: relative;
+}
+.resizer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 5px;
+  height: 100%;
+  background: #111;
+  cursor: ew-resize;
+  z-index: 10;
+}
