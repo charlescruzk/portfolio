@@ -118,19 +118,41 @@ footer {
   margin-top: 1rem;
 }
 
-/* Button styling */
+/* Base button styling for icon buttons */
 .btn {
-  background-color: #4CAF50;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  font-weight: 600;
+  color: #fff;
   transition: background-color 0.3s ease;
-  display: inline-block;
 }
-.btn:hover {
+
+/* Specific colours for each button */
+.btn-mail {
+  background-color: #4CAF50;
+}
+
+.btn-mail:hover {
   background-color: #45a049;
+}
+
+.btn-linkedin {
+  background-color: #0077B5;
+}
+
+.btn-linkedin:hover {
+  background-color: #006097;
+}
+
+/* Size the SVG icons within the buttons */
+.btn svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke: currentColor;
 }
 .grid-item:hover .overlay-text {
   opacity: 1;
