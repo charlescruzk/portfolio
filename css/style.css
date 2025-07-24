@@ -1,101 +1,11 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Helvetica Neue', sans-serif;
-    color: #111;
-    background-color: #fff;
-    line-height: 1.6;
-    padding: 40px;
-}
-
-header {
-    text-align: center;
-    padding-bottom: 60px;
-}
-
-header h1 {
-    font-size: 3rem;
-    letter-spacing: -1px;
-}
-
-header p {
-    font-size: 1.2rem;
-    color: #777;
-}
-
-section {
-    margin-bottom: 80px;
-}
-
-.work .gallery {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.gallery img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-footer {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #666;
-}
-
-.portfolio-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.portfolio-gallery img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-/* Before/After Slider */
-.before-after {
-  margin-top: 80px;
-}
-.ba-slider {
-  position: relative;
-  max-width: 600px;
-  margin: 0 auto;
-}
-.ba-wrapper {
-  position: relative;
-}
-.ba-wrapper img {
-  display: block;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.ba-wrapper img:first-child {
-  position: relative;
-}
-.resizer {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 5px;
-  height: 100%;
-  background: #111;
-  cursor: ew-resize;
-  z-index: 10;
-}
+body { font-family: 'Helvetica Neue', sans-serif; padding: 40px; background: #fff; color: #111; }
+header, footer { text-align: center; }
+.gallery { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+.gallery img { width: 100%; max-width: 500px; border-radius: 4px; }
+.portfolio-gallery img { border: 1px solid #ddd; }
+.ba-slider { position: relative; max-width: 600px; margin: 40px auto; }
+.ba-wrapper { position: relative; }
+.ba-wrapper img { width: 100%; position: absolute; top: 0; left: 0; }
+.ba-wrapper img:first-child { position: relative; }
+.resizer { position: absolute; top: 0; left: 50%; width: 5px; background: #111; height: 100%; cursor: ew-resize; z-index: 10; }
