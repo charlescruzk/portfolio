@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Charles Cruz | Portfolio</title>
+  <title>Charles Cruz | Photo Retouching Portfolio</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -12,88 +13,35 @@
     <p>Photo Editor/Retoucher</p>
   </header>
 
-  <section class="about">
-    <h2>About Me</h2>
-    <p>
-      Seasoned and innovative Head Photo Retoucher with 10+ years of experience in high-volume fashion and e-commerce.
-      I specialize in AI-assisted retouching workflows and scripted automation to enhance speed, accuracy, and brand
-      consistency. Whether leading studio teams or handling client work solo, I’m committed to elevating visual quality
-      through technical precision and creative vision.
-    </p>
+  <section class="intro">
+    <p data-aos="fade-up">Seasoned and innovative Head Photo Retoucher with 10+ years of experience in high-volume fashion and e-commerce. I specialize in AI-assisted workflows to streamline production while maintaining high standards of quality and brand consistency.</p>
   </section>
 
-  <section class="experience">
-    <h2>Experience</h2>
-    <h3>Rockstar Original – Head Photo Retoucher</h3>
-    <p><em>Nov 2022 – Present</em></p>
-    <ul>
-      <li>Lead retoucher for social, e-commerce, and campaign content</li>
-      <li>Developed AI-assisted tools to speed up workflow</li>
-      <li>Delivered hundreds of assets weekly under tight timelines</li>
-      <li>Collaborated closely with photographers and art directors</li>
-    </ul>
-
-    <h3>Miss Lola – Photo Editor / Retoucher</h3>
-    <p><em>May 2021 – Nov 2022</em></p>
-    <ul>
-      <li>Managed large-scale fashion retouching with tight turnaround</li>
-      <li>Maintained color consistency and brand cohesion</li>
-    </ul>
-
-    <h3>Freelance Photographer</h3>
-    <p><em>Aug 2019 – Present</em></p>
-    <ul>
-      <li>Editorial, portrait, and lifestyle photography</li>
-      <li>Detailed post-production with Lightroom & Photoshop</li>
-    </ul>
+  <section class="portfolio-section">
+    <h2 data-aos="fade-up">Selected Retouching Work</h2>
+    <div class="grid">
+      <div class="grid-item" data-aos="fade-up"><img src="images/portfolio/retouch1.webp" alt="Retouch 1"></div>
+      <div class="grid-item" data-aos="fade-up"><img src="images/portfolio/retouch2.webp" alt="Retouch 2"></div>
+      <div class="grid-item" data-aos="fade-up"><img src="images/portfolio/retouch3.webp" alt="Retouch 3"></div>
+      <div class="grid-item" data-aos="fade-up"><img src="images/portfolio/retouch4.webp" alt="Retouch 4"></div>
+    </div>
   </section>
 
-  <section class="resume">
-    <h2>Resume</h2>
-    <p><a href="assets/Charles_Cruz_Resume_2025.pdf" download>📄 Download My Resume (PDF)</a></p>
-  </section>
-
-  <section class="work">
-    <h2>Selected Work</h2>
-    <div class="gallery">
+  <section class="sample-work">
+    <h2 data-aos="fade-up">Sample Work (Click to Enlarge)</h2>
+    <div class="gallery" data-aos="fade-up">
       <a href="images/sample1.webp" target="_blank"><img src="images/sample1.webp" alt="Sample Work 1"></a>
       <a href="images/sample2.webp" target="_blank"><img src="images/sample2.webp" alt="Sample Work 2"></a>
     </div>
   </section>
 
-  <section class="before-after">
-    <h2>Before & After</h2>
-
-    <div class="ba-slider">
-      <div class="ba-wrapper">
-        <img src="images/before.webp" alt="Before">
-        <div class="resizer"></div>
-        <img src="images/after.webp" alt="After">
-      </div>
-    </div>
-
-    <div class="ba-slider">
-      <div class="ba-wrapper">
-        <img src="images/before2.webp" alt="Before">
-        <div class="resizer"></div>
-        <img src="images/after2.webp" alt="After">
-      </div>
-    </div>
-  </section>
-
-  <section class="portfolio">
-    <h2>Portfolio</h2>
-    <div class="gallery portfolio-gallery">
-      <img src="images/portfolio/model001.webp" alt="Model 1" />
-      <img src="images/portfolio/before_after.webp" alt="Before and After" />
-      <img src="images/portfolio/editorial_sample.webp" alt="Editorial Sample" />
-    </div>
-  </section>
-
-  <footer>
+  <footer data-aos="fade-in">
     <p>Contact: <a href="mailto:charlescruz.k@me.com">charlescruz.k@me.com</a></p>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
 </body>
 </html>
