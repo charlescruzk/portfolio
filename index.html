@@ -1,85 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Charles Cruz | Retouching Portfolio</title>
+  <title>Charles Cruz | Portfolio</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html" class="active">Portfolio</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="photography.html">Photography</a></li>
-    </ul>
-  </nav>
 
-  <header>
-    <h1>Charles Cruz</h1>
-    <p>Photo Editor/Retoucher</p>
-  </header>
+<nav class="main-nav">
+  <div class="nav-left">
+    <a href="index.html" class="logo">Charles Cruz</a>
+  </div>
+  <div class="nav-right">
+    <a href="index.html">Portfolio</a>
+    <a href="about.html">About</a>
+    <a href="photography.html">Photography</a>
+  </div>
+</nav>
 
-  <section class="intro">
-    <p data-aos="fade-up">Seasoned and innovative Head Photo Retoucher with 10+ years of experience in high-volume fashion and e-commerce. I specialize in AI-assisted workflows to streamline production while maintaining high standards of quality and brand consistency.</p>
-  </section>
 
-  <section class="portfolio-section">
-    <h2 data-aos="fade-up">Selected Retouching Work</h2>
-    <div class="grid">
-      <div class="grid-item" data-aos="fade-up"><img src="images/portfolio/retouch1.webp" alt="Retouch 1"></div>
-      <div class="grid-item" data-aos="fade-up"><img src="images/portfolio/retouch2.webp" alt="Retouch 2"></div>
-      <div class="grid-item" data-aos="fade-up"><img src="images/portfolio/retouch3.webp" alt="Retouch 3"></div>
-      <div class="grid-item" data-aos="fade-up"><img src="images/portfolio/retouch4.webp" alt="Retouch 4"></div>
+<header><h1>Charles Cruz</h1><p>Photo Editor/Retoucher</p></header>
+<section class="portfolio-section">
+  <h2 data-aos="fade-up">Selected Retouching Work</h2>
+  <div class="grid">
+    <div class="grid-item" data-aos="fade-up"><img src="images/portfolio/retouch1.webp" alt=""></div>
+    <div class="grid-item" data-aos="fade-up"><img src="images/portfolio/retouch2.webp" alt=""></div>
+    <div class="grid-item" data-aos="fade-up"><img src="images/portfolio/retouch3.webp" alt=""></div>
+    <div class="grid-item" data-aos="fade-up"><img src="images/portfolio/retouch4.webp" alt=""></div>
+  </div>
+</section>
+<section class="before-after">
+  <h2 data-aos="fade-up">Before & After Comparison</h2>
+  <div class="ba-slider" data-aos="fade-up">
+    <div class="ba-wrapper">
+      <img src="images/before.webp" alt="Before">
+      <div class="resizer"></div>
+      <img src="images/after.webp" alt="After">
     </div>
-  </section>
+  </div>
+</section>
+<section class="sample-work">
+  <h2 data-aos="fade-up">More Samples</h2>
+  <div class="gallery" data-aos="fade-up">
+    <img src="images/sample1.webp" class="lightbox-trigger" alt="Sample 1">
+    <img src="images/sample2.webp" class="lightbox-trigger" alt="Sample 2">
+  </div>
+</section>
+<footer><p>Contact: <a href="mailto:charlescruz.k@me.com">charlescruz.k@me.com</a></p></footer>
 
-  <section class="before-after">
-    <h2 data-aos="fade-up">Before & After Comparison</h2>
-    <div class="ba-slider" data-aos="fade-up">
-      <div class="ba-wrapper">
-        <img src="images/before.webp" alt="Before">
-        <div class="resizer"></div>
-        <img src="images/after.webp" alt="After">
-      </div>
-    </div>
-  </section>
 
-  <section class="sample-work">
-    <h2 data-aos="fade-up">Sample Work (Click to Enlarge)</h2>
-    <div class="gallery" data-aos="fade-up">
-      <a href="images/sample1.webp" target="_blank"><img src="images/sample1.webp" alt="Sample Work 1"></a>
-      <a href="images/sample2.webp" target="_blank"><img src="images/sample2.webp" alt="Sample Work 2"></a>
-    </div>
-  </section>
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img" />
+</div>
 
-  <footer data-aos="fade-in">
-    <p>Contact: <a href="mailto:charlescruz.k@me.com">charlescruz.k@me.com</a></p>
-  </footer>
-
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
-
-    document.addEventListener("DOMContentLoaded", function () {
-      const resizer = document.querySelector(".resizer");
-      const wrapper = document.querySelector(".ba-wrapper");
-      const afterImg = wrapper.querySelectorAll("img")[1];
-
-      let isDragging = false;
-
-      resizer.addEventListener("mousedown", () => isDragging = true);
-      window.addEventListener("mouseup", () => isDragging = false);
-      window.addEventListener("mousemove", (e) => {
-        if (!isDragging) return;
-        let rect = wrapper.getBoundingClientRect();
-        let offsetX = e.clientX - rect.left;
-        let percentage = Math.max(0, Math.min(100, (offsetX / rect.width) * 100));
-        resizer.style.left = percentage + "%";
-        afterImg.style.clipPath = `inset(0 0 0 ${percentage}%)`;
-      });
-    });
-  </script>
+<script src="js/script.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 </body>
 </html>
