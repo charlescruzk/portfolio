@@ -5,7 +5,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Charles Cruz | Retouching Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+
+ <style>
+    /* NAVIGATION BAR STYLING */
+    header {
+      background-color: #111;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-transform: uppercase;
+    }
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      transition: color 0.3s, background-color 0.3s;
+      padding: 0.25rem 0.5rem;
+    }
+    nav a:hover {
+      background-color: #8BC34A;
+      color: #000;
+    }
+    nav a.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      text-transform: uppercase;
+    }
+
+    /* IMAGE HOVER EFFECT */
+    .hover-effect {
+      position: relative;
+      display: inline-block;
+    }
+    .hover-effect img {
+      display: block;
+    }
+    .hover-effect .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    .hover-effect:hover .overlay {
+      opacity: 1;
+    }
+
+    /* BEFORE-AFTER SLIDER STYLING */
+    .before-after-section {
+      margin-top: 4rem;
+      text-align: center;
+    }
+    .ba-container {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .ba-container img {
+      width: 100%;
+      display: block;
+    }
+    .ba-slider {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 3px;
+      height: 100%;
+      background-color: white;
+      cursor: ew-resize;
+    }
+  </style>
+
+
+  
 </head>
 <body>
 
@@ -14,30 +102,97 @@
   <p>High-Volume Fashion & E-Commerce Photo Retoucher</p>
 </header>
 
-<section class="before-after-section">
-  <h2>Before & After</h2>
+<section class="fade-in-section">
+  <h2>Overview</h2>
+  <p>With over a decade in professional image retouching, I specialize in high-throughput, on-brand post-production for fashion campaigns and e-commerce platforms. My work blends pixel-perfect attention with scalable workflows powered by automation and AI.</p>
+</section>
 
-  <div class="ba-container">
-    <img src="images/before3.webp" alt="Before Image" class="ba-img">
-    <img src="images/after3.webp" alt="After Image" class="ba-img after-image">
-    <div class="ba-slider"></div>
-  </div>
-
-  <div class="ba-container">
-    <img src="images/before4.webp" alt="Before Image" class="ba-img">
-    <img src="images/after4.webp" alt="After Image" class="ba-img after-image">
-    <div class="ba-slider"></div>
-  </div>
-
-  <div class="ba-container">
-    <img src="images/before1.webp" alt="Before Image" class="ba-img">
-    <img src="images/after1.webp" alt="After Image" class="ba-img after-image">
-    <div class="ba-slider"></div>
+<section class="fade-in-section">
+  <h2>E-Commerce Model</h2>
+  <div class="grid">
+    <div class="grid-item"><img src="images/ecommerce/ecommerce1.webp" alt="E-Commerce 1"><div class="overlay-text">Denim Editorial: Edit & Retouch</div></div>
+    <div class="grid-item"><img src="images/ecommerce/ecommerce2.webp" alt="E-Commerce 2"><div class="overlay-text">Studio Editorial: Retouching</div></div>
+    <div class="grid-item"><img src="images/ecommerce/ecommerce3.webp" alt="E-Commerce 3"><div class="overlay-text">Lifestyle: Edit & Retouch</div></div>
   </div>
 </section>
 
-<script src="script-combined.js"></script>
-<script src="fadein.js"></script>
-<script src="slider.js"></script>
+<section class="fade-in-section">
+  <h2>Flatlays</h2>
+  <div class="grid">
+    <div class="grid-item"><img src="images/flatlay/flatlay2.webp" alt="Flatlay 1"><div class="overlay-text">Flatlay Edit</div></div>
+    <div class="grid-item"><img src="images/flatlay/flatlay1.webp" alt="Flatlay 2"><div class="overlay-text">Flatlay Edit</div></div>
+    <div class="grid-item"><img src="images/flatlay/flatlay3.webp" alt="Flatlay 3"><div class="overlay-text">Color Matching</div></div>
+    <div class="grid-item"><img src="images/flatlay/flatlay4.webp" alt="Flatlay 4"><div class="overlay-text">Flatlay Edit</div></div>
+    <div class="grid-item"><img src="images/flatlay/flatlay5.webp" alt="Flatlay 5"><div class="overlay-text">Flatlay Edit</div></div>
+  </div>
+</section>
+
+<section class="fade-in-section">
+  <h2>Jewelry</h2>
+  <div class="grid">
+    <div class="grid-item"><img src="images/jewelry/jewelry1.webp" alt="Jewelry 1"><div class="overlay-text">View Full</div></div>
+    <div class="grid-item"><img src="images/jewelry/jewelry2.webp" alt="Jewelry 2"><div class="overlay-text">View Full</div></div>
+    <div class="grid-item"><img src="images/jewelry/jewelry3.webp" alt="Jewelry 3"><div class="overlay-text">View Full</div></div>
+    <div class="grid-item"><img src="images/jewelry/jewelry4.webp" alt="Jewelry 4"><div class="overlay-text">View Full</div></div>
+  </div>
+</section>
+
+      <!-- BEFORE-AFTER SLIDER SECTION -->
+    <section class="before-after-section">
+      <h2>Before & After</h2>
+
+      <div class="ba-container">
+        <img src="images/before3.webp" alt="Before Image" style="position:absolute; top:0; left:0;">
+        <img src="images/after3.webp" alt="After Image" style="position:relative; clip-path: inset(0 50% 0 0);">
+        <div class="ba-slider"></div>
+      </div>
+
+      <div class="ba-container">
+        <img src="images/before4.webp" alt="Before Image" style="position:absolute; top:0; left:0;">
+        <img src="images/after4.webp" alt="After Image" style="position:relative; clip-path: inset(0 50% 0 0);">
+        <div class="ba-slider"></div>
+      </div>
+      
+      <div class="ba-container">
+        <img src="images/before1.webp" alt="Before Image" style="position:absolute; top:0; left:0;">
+        <img src="images/after1.webp" alt="After Image" style="position:relative; clip-path: inset(0 50% 0 0);">
+        <div class="ba-slider"></div>
+      </div>
+    </section>
+
+
+<footer>
+  <div class="contact-buttons">
+    <!-- Icon button to open the user's default mail client -->
+    <a href="mailto:charlescruz.k@me.com" class="btn btn-mail" aria-label="Send email">
+      <!-- Mail icon from Tabler Icons (outline style) -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+        <path d="M3 7l9 6l9 -6" />
+      </svg>
+    </a>
+    <!-- Icon button linking to LinkedIn profile; opens in a new tab/window -->
+    <a href="https://linkedin.com/in/charlescruzk" class="btn btn-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+      <!-- LinkedIn brand icon from Tabler Icons (outline style) -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M8 11v5" />
+        <path d="M8 8v.01" />
+        <path d="M12 16v-5" />
+        <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+        <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+      </svg>
+    </a>
+  </div>
+</footer>
+
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img" />
+</div>
+
+<script src="js/script-combined.js"></script>
+<script src="js/fadein.js"></script>
 </body>
 </html>
