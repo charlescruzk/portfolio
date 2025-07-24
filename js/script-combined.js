@@ -29,9 +29,17 @@ document.addEventListener("DOMContentLoaded", function () {
     currentIndex = index;
   }
 
-  // Attach click listeners to each grid image to open the lightbox
+  // Attach click listeners to each grid item and its image to open the lightbox.
+  // We listen on the parent element (grid-item) to avoid the overlay div
+  // blocking pointer events. Clicking on either the image or its overlay
+  // will trigger the lightbox to open.
   gridImages.forEach((img, index) => {
+    // Register on the image element
     img.addEventListener("click", () => openLightbox(index));
+    // Also register on the parent .grid-item element
+    if (img.parentElement) {
+      img.parentElement.addEventListener("click", () => openLightbox(index));
+    }
   });
 
   // Close button hides the lightbox and clears its contents
