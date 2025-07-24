@@ -1,53 +1,38 @@
 
-document.addEventListener("DOMContentLoaded", function () {
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-  const lightboxCaption = document.getElementById("lightbox-caption");
-  const closeBtn = document.querySelector(".close");
-  const gridImages = document.querySelectorAll(".grid-item img");
+document.querySelectorAll('.ba-container').forEach(container => {
+  const afterImage = container.querySelectorAll('img')[1];
+  const slider = container.querySelector('.ba-slider');
 
-  let currentIndex = 0;
+  const updateSlider = (x) => {
+    const rect = container.getBoundingClientRect();
+    let offsetX = x - rect.left;
+    offsetX = Math.max(0, Math.min(offsetX, rect.width));
+    const percent = (offsetX / rect.width) * 100;
 
-  function openLightbox(index) {
-    const img = gridImages[index];
-    lightbox.style.display = "flex";
-    lightboxImg.src = img.src;
-    lightboxImg.alt = img.alt;
-    lightboxCaption.textContent = img.alt || "";
-    currentIndex = index;
-  }
+    afterImage.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+    slider.style.left = `${percent}%`;
+  };
 
-  gridImages.forEach((img, index) => {
-    img.addEventListener("click", () => openLightbox(index));
+  let isDragging = false;
+
+  container.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    updateSlider(e.clientX);
   });
 
-  closeBtn.addEventListener("click", () => {
-    lightbox.style.display = "none";
-    lightboxImg.src = "";
-    lightboxCaption.textContent = "";
+  window.addEventListener('mousemove', (e) => {
+    if (isDragging) updateSlider(e.clientX);
   });
 
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) {
-      lightbox.style.display = "none";
-      lightboxImg.src = "";
-      lightboxCaption.textContent = "";
-    }
+  window.addEventListener('mouseup', () => {
+    isDragging = false;
   });
 
-  document.addEventListener("keydown", (e) => {
-    if (lightbox.style.display === "flex") {
-      if (e.key === "ArrowRight") {
-        currentIndex = (currentIndex + 1) % gridImages.length;
-        openLightbox(currentIndex);
-      } else if (e.key === "ArrowLeft") {
-        currentIndex = (currentIndex - 1 + gridImages.length) % gridImages.length;
-        openLightbox(currentIndex);
-      } else if (e.key === "Escape") {
-        lightbox.style.display = "none";
-        lightboxImg.src = "";
-        lightboxCaption.textContent = "";
-      }
-    }
+  container.addEventListener('touchstart', (e) => {
+    updateSlider(e.touches[0].clientX);
+  });
+
+  container.addEventListener('touchmove', (e) => {
+    updateSlider(e.touches[0].clientX);
   });
 });
