@@ -11,11 +11,25 @@ document.addEventListener("DOMContentLoaded", function () {
   /* mobile navigation toggle */
   const navToggle = document.getElementById("navToggle");
   const navMenu = document.getElementById("navMenu");
+  const navBar = document.querySelector('.main-nav');
+  let lastScroll = 0;
   if (navToggle && navMenu) {
     navToggle.addEventListener("click", () => {
       navMenu.classList.toggle("show");
     });
   }
+
+  /* hide nav on scroll down, show on scroll up */
+  window.addEventListener('scroll', () => {
+    if (!navBar) return;
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    if (currentScroll > lastScroll && currentScroll > navBar.offsetHeight) {
+      navBar.classList.add('hide');
+    } else {
+      navBar.classList.remove('hide');
+    }
+    lastScroll = currentScroll;
+  });
   /* Lightbox functionality */
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
