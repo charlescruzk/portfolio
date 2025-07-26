@@ -26,6 +26,7 @@ header {
   font-weight: 600;
   text-decoration: none;
   color: white;
+  font-size: 1rem; /* baseline size for logo */
 }
 
 .nav-menu {
@@ -41,10 +42,12 @@ header {
   text-decoration: none;
   transition: color 0.3s, background-color 0.3s;
   padding: 0.25rem 0.5rem;
+  font-size: 0.9rem; /* slightly smaller menu text */
 }
 
 .nav-menu a:hover {
-  background-color: #8BC34A;
+  /* lighter shade based on the active link colour */
+  background-color: #91cf94;
   color: #000;
 }
 
