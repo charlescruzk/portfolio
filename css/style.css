@@ -69,13 +69,13 @@ header {
 }
 
 .nav-menu a:hover {
-  /* maroon hover colour */
-  background-color: #b22222;
+  /* brighter red on hover */
+  background-color: #e53935;
   color: #fff;
 }
 
 .nav-menu a.active {
-  background-color: #800000;
+  background-color: #c62828;
   color: #fff;
 }
 
@@ -236,19 +236,19 @@ footer {
 
 /* Specific colours for each button */
 .btn-mail {
-  background-color: #800000;
+  background-color: #c62828;
 }
 
 .btn-mail:hover {
-  background-color: #b22222;
+  background-color: #e53935;
 }
 
 .btn-linkedin {
-  background-color: #800000;
+  background-color: #c62828;
 }
 
 .btn-linkedin:hover {
-  background-color: #b22222;
+  background-color: #e53935;
 }
 
 /* Size the SVG icons within the buttons */
@@ -316,14 +316,14 @@ footer {
 }
 .contact-form button {
   padding: 0.75rem;
-  background-color: #800000;
+  background-color: #c62828;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 .contact-form button:hover {
-  background-color: #b22222;
+  background-color: #e53935;
 }
 
 @media screen and (min-width: 1024px) {
