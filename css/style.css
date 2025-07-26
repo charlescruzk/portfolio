@@ -23,6 +23,7 @@ header {
   left: 0;
   right: 0;
   width: 100%;
+  box-sizing: border-box; /* prevent padding from expanding width */
   z-index: 1000;
   text-transform: uppercase;
 }
