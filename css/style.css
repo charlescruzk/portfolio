@@ -1,5 +1,5 @@
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   background: #fff;
   color: #111;
   margin: 0;
@@ -69,14 +69,14 @@ header {
 }
 
 .nav-menu a:hover {
-  /* lighter shade based on the active link colour */
-  background-color: #91cf94;
-  color: #000;
+  /* maroon hover colour */
+  background-color: #b22222;
+  color: #fff;
 }
 
 .nav-menu a.active {
-  background-color: #4CAF50;
-  color: white;
+  background-color: #800000;
+  color: #fff;
 }
 
 .nav-toggle {
@@ -236,19 +236,19 @@ footer {
 
 /* Specific colours for each button */
 .btn-mail {
-  background-color: #4CAF50;
+  background-color: #800000;
 }
 
 .btn-mail:hover {
-  background-color: #45a049;
+  background-color: #b22222;
 }
 
 .btn-linkedin {
-  background-color: #0077B5;
+  background-color: #800000;
 }
 
 .btn-linkedin:hover {
-  background-color: #006097;
+  background-color: #b22222;
 }
 
 /* Size the SVG icons within the buttons */
@@ -264,7 +264,7 @@ footer {
 .fade-in-section {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
   will-change: opacity, transform;
 }
 .fade-in-section.is-visible {
@@ -310,16 +310,20 @@ footer {
   border-radius: 4px;
   font-family: inherit;
 }
+
+.contact h2 {
+  font-weight: 700;
+}
 .contact-form button {
   padding: 0.75rem;
-  background-color: #4CAF50;
+  background-color: #800000;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 .contact-form button:hover {
-  background-color: #45a049;
+  background-color: #b22222;
 }
 
 @media screen and (min-width: 1024px) {
