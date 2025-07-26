@@ -128,4 +128,30 @@ document.addEventListener("DOMContentLoaded", function () {
       updateSlider(e.touches[0].clientX);
     });
   });
+
+  /* Contact form handling */
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const emailInput = document.getElementById('email');
+      const subject = document.getElementById('subject').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!subject) {
+        alert('Please enter a subject.');
+        return;
+      }
+
+      if (!emailInput.checkValidity()) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      const mailtoLink = `mailto:charlescruz.k@me.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + emailInput.value + '\n\n' + message)}`;
+      window.location.href = mailtoLink;
+    });
+  }
 });
