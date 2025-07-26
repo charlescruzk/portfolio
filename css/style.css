@@ -13,7 +13,11 @@ a {
 
 a:hover,
 a:focus {
-  color: #FFC72C;
+  color: #FFDE70;
+}
+
+a:active {
+  color: #D19600;
 }
 
 /* Visually hidden helper for SEO headings */
@@ -57,8 +61,15 @@ header {
 .main-nav .logo {
   font-weight: 600;
   text-decoration: none;
-  color: #FDB927;
+  color: #fff;
   font-size: 1rem; /* baseline size for logo */
+}
+
+.main-nav .logo:hover,
+.main-nav .logo:focus,
+.main-nav .logo:active,
+.main-nav .logo:visited {
+  color: #fff;
 }
 
 .nav-menu {
@@ -77,15 +88,15 @@ header {
   font-size: 0.9rem; /* slightly smaller menu text */
 }
 
+
 .nav-menu a:hover {
-  /* brighter red on hover */
-  background-color: #e53935;
-  color: #fff;
+  background-color: #FFDE70;
+  color: #111;
 }
 
 .nav-menu a.active {
-  background-color: #c62828;
-  color: #fff;
+  background-color: #FDB927;
+  color: #111;
 }
 
 .nav-toggle {
@@ -245,19 +256,19 @@ footer {
 
 /* Specific colours for each button */
 .btn-mail {
-  background-color: #c62828;
+  background-color: #FDB927;
 }
 
 .btn-mail:hover {
-  background-color: #e53935;
+  background-color: #FFDE70;
 }
 
 .btn-linkedin {
-  background-color: #c62828;
+  background-color: #FDB927;
 }
 
 .btn-linkedin:hover {
-  background-color: #e53935;
+  background-color: #FFDE70;
 }
 
 /* Size the SVG icons within the buttons */
@@ -325,14 +336,14 @@ footer {
 }
 .contact-form button {
   padding: 0.75rem;
-  background-color: #c62828;
+  background-color: #FDB927;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 .contact-form button:hover {
-  background-color: #e53935;
+  background-color: #FFDE70;
 }
 
 @media screen and (min-width: 1024px) {
