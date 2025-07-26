@@ -132,8 +132,8 @@ footer {
   .nav-menu {
     position: absolute;
     top: 100%;
-    left: 0;
-    right: 0;
+    right: 2rem;
+    left: auto;
     background-color: #111;
     flex-direction: column;
     display: none;
