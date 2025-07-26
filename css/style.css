@@ -17,7 +17,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 1rem 5vw;
   position: fixed; /* keep menu visible */
   top: 0;
   left: 0;
@@ -133,6 +133,7 @@ footer {
   body { padding: 4rem 1rem 0; }
   h1 { font-size: 2rem; }
   h2 { font-size: 1.5rem; }
+  .main-nav { padding: 1rem; }
   .nav-toggle { display: flex; }
   .nav-menu {
     position: absolute;
