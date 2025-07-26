@@ -8,6 +8,14 @@
  * proper initialisation.
  */
 document.addEventListener("DOMContentLoaded", function () {
+  /* mobile navigation toggle */
+  const navToggle = document.getElementById("navToggle");
+  const navMenu = document.getElementById("navMenu");
+  if (navToggle && navMenu) {
+    navToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
+  }
   /* Lightbox functionality */
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
