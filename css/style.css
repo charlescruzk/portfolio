@@ -96,7 +96,11 @@ header {
 
 .nav-menu a.active {
   background-color: #FDB927;
-  color: #111;
+  color: #fff;
+}
+
+.nav-menu a.active:hover {
+  color: #fff;
 }
 
 .nav-toggle {
