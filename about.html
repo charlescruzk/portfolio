@@ -1,40 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me | Charles Cruz</title>
   <link rel="stylesheet" href="css/style.css" />
+  
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
 <nav class="main-nav">
-  <div class="nav-left">
-    <a href="index.html" class="logo">Charles Cruz</a>
-  </div>
-  <div class="nav-right">
-    <a href="index.html">Portfolio</a>
-    <a href="about.html">About</a>
-    <a href="photography.html">Photography</a>
-  </div>
+  <a href="index.html" class="logo">Charles Cruz</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="index.html">Portfolio</a></li>
+    <li><a href="about.html" class="active">About Me</a></li>
+  </ul>
 </nav>
 
+<header class="about-header">
+  <img src="images/ecommerce/ecommerce1.webp" alt="Working behind the scenes" class="hero-image">
+  <h1 class="hero-title">About Me</h1>
+</header>
 
-<header><h1>About Me</h1></header>
-<section class="intro"><p data-aos="fade-up">With over a decade of experience in professional image retouching and editing, I specialize in fashion, e-commerce, and editorial workflows. My work blends technical expertise with creative precision to deliver assets that resonate across platforms and audiences.</p></section>
-<footer><p>Contact: <a href="mailto:charlescruz.k@me.com">charlescruz.k@me.com</a></p></footer>
+<section class="intro fade-in-section">
+  <h2>Hello, my name is Charles Cruz</h2>
+  <img src="images/portfolio/placeholder1.jpg" alt="Portrait placeholder" style="max-width:200px;border-radius:50%;display:block;margin:1rem auto;">
+  <p>I'm a photo retoucher with more than a decade of experience making pixels behave. From fashion lookbooks to high-volume e-commerce shoots, I've color corrected, masked, and polished it all.</p>
+  <p>When I'm not elbow deep in layers, I'm probably cracking dad jokes or chasing the perfect cup of coffee&mdash;sometimes both at once.</p>
+  <p>Fun fact: during my time in the U.S. Navy I had a near-death experience. Apparently Heaven had a waiting list, because God told me there were photos that still needed retouching.</p>
+</section>
+
+<section class="contact fade-in-section">
+  <h2>Contact Me</h2>
+  <form id="contactForm" class="contact-form">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
 
 
 <div id="lightbox" class="lightbox">
   <span class="close">&times;</span>
   <img loading="lazy" class="lightbox-content" id="lightbox-img" />
 </div>
+
+
+
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" name="subject" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<footer>
+  <div class="contact-buttons">
+    <a href="https://linkedin.com/in/charlescruzk" class="btn btn-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M8 11v5" />
+        <path d="M8 8v.01" />
+        <path d="M12 16v-5" />
+        <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+        <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+      </svg>
+    </a>
+  </div>
+</footer>
 
 <script src="js/script-combined.js" defer></script>
 <script src="js/fadein.js" defer></script>

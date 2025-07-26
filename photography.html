@@ -15,14 +15,16 @@
 <body>
 
 <nav class="main-nav">
-  <div class="nav-left">
-    <a href="index.html" class="logo">Charles Cruz</a>
-  </div>
-  <div class="nav-right">
-    <a href="index.html">Portfolio</a>
-    <a href="about.html">About</a>
-    <a href="photography.html">Photography</a>
-  </div>
+  <a href="index.html" class="logo">Charles Cruz</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="index.html">Portfolio</a></li>
+    <li><a href="about.html">About Me</a></li>
+  </ul>
 </nav>
 
 
@@ -39,5 +41,6 @@
 <script src="js/script-combined.js" defer></script>
 <script src="js/fadein.js" defer></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
 </body>
 </html>

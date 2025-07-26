@@ -3,11 +3,80 @@ body {
   background: #fff;
   color: #111;
   margin: 0;
-  padding: 0 5vw;
+  padding: 4rem 8vw 0; /* leave space for fixed nav */
   line-height: 1.6;
 }
 header {
   padding: 4rem 0 2rem;
+}
+
+/* navigation */
+.main-nav {
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 8vw;
+  position: fixed; /* keep menu visible */
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-sizing: border-box; /* prevent padding from expanding width */
+  z-index: 1000;
+  text-transform: uppercase;
+}
+
+.main-nav .logo {
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem; /* baseline size for logo */
+}
+
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-menu a {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s, background-color 0.3s;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.9rem; /* slightly smaller menu text */
+}
+
+.nav-menu a:hover {
+  /* lighter shade based on the active link colour */
+  background-color: #91cf94;
+  color: #000;
+}
+
+.nav-menu a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin-bottom: 5px;
+  border-radius: 2px;
 }
 h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
 h2 { font-size: 2rem; margin: 2.5rem 0 1rem; }
@@ -62,9 +131,22 @@ footer {
   color: #777;
 }
 @media screen and (max-width: 768px) {
-  body { padding: 0 1rem; }
+  body { padding: 4rem 1rem 0; }
   h1 { font-size: 2rem; }
   h2 { font-size: 1.5rem; }
+  .main-nav { padding: 1rem; }
+  .nav-toggle { display: flex; }
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    right: 2rem;
+    left: auto;
+    background-color: #111;
+    flex-direction: column;
+    display: none;
+  }
+  .nav-menu.show { display: flex; }
+  .nav-menu a { margin: 1rem; }
 }
 
 /* BEFORE‑AFTER SLIDER ARROWS */
@@ -167,4 +249,63 @@ footer {
 .fade-in-section.is-visible {
   opacity: 1;
   transform: none;
+}
+
+/* Hero section on About page */
+.about-header {
+  position: relative;
+  text-align: center;
+}
+.about-header .hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.hero-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+/* Contact form styling */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+.contact-form button {
+  padding: 0.75rem;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background-color: #45a049;
+}
+
+@media screen and (min-width: 1024px) {
+  .intro,
+  .contact {
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

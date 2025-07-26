@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>Charles Cruz | Retouching Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
 
 
  <style>
-    /* NAVIGATION BAR STYLING */
+    /* HEADER STYLING */
     header {
       background-color: #111;
       color: white;
@@ -20,21 +22,6 @@
       justify-content: space-between;
       align-items: center;
       text-transform: uppercase;
-    }
-    nav a {
-      color: white;
-      margin-left: 1.5rem;
-      text-decoration: none;
-      transition: color 0.3s, background-color 0.3s;
-      padding: 0.25rem 0.5rem;
-    }
-    nav a:hover {
-      background-color: #8BC34A;
-      color: #000;
-    }
-    nav a.active {
-      background-color: #4CAF50;
-      color: white;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -77,7 +64,7 @@
     .ba-container {
       position: relative;
       max-width: 800px;
-      margin: 0 auto;
+      margin: 1.5rem auto;
     }
     .ba-container img {
       width: 100%;
@@ -99,10 +86,19 @@
 </head>
 <body>
 
-<header>
-  <h1>Charles Cruz</h1>
-  <p>High-Volume Fashion & E-Commerce Photo Retoucher</p>
-</header>
+<nav class="main-nav">
+  <a href="index.html" class="logo">Charles Cruz</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="index.html" class="active">Portfolio</a></li>
+    <li><a href="about.html">About Me</a></li>
+  </ul>
+</nav>
+
 
 <section class="fade-in-section">
   <h2>Overview</h2>
@@ -195,6 +191,8 @@
 </div>
 
 <script src="js/script-combined.js" defer></script>
+
 <script src="js/fadein.js" defer></script>
+
 </body>
 </html>
