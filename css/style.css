@@ -3,7 +3,7 @@ body {
   background: #fff;
   color: #111;
   margin: 0;
-  padding: 0 5vw;
+  padding: 4rem 5vw 0; /* leave space for fixed nav */
   line-height: 1.6;
 }
 header {
@@ -18,7 +18,12 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  position: relative;
+  position: fixed; /* keep menu visible */
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
   text-transform: uppercase;
 }
 
@@ -125,7 +130,7 @@ footer {
   color: #777;
 }
 @media screen and (max-width: 768px) {
-  body { padding: 0 1rem; }
+  body { padding: 4rem 1rem 0; }
   h1 { font-size: 2rem; }
   h2 { font-size: 1.5rem; }
   .nav-toggle { display: flex; }
