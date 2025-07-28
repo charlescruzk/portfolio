@@ -1,6 +1,11 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-  const faders = document.querySelectorAll('.fade-in-section');
+  const sliders = document.querySelectorAll('.slide-in-section');
+
+  // Apply a staggered delay based on the element's position
+  sliders.forEach((slider, index) => {
+    slider.style.setProperty('--delay', `${index * 0.2}s`);
+  });
 
   const appearOptions = {
     threshold: 0.1,
@@ -15,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }, appearOptions);
 
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
+  sliders.forEach(slider => {
+    appearOnScroll.observe(slider);
   });
 });
