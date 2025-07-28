@@ -291,9 +291,9 @@ footer {
 
 .slide-in-section {
   opacity: 0;
-  transform: translateX(-40px);
-  transition: transform 0.6s ease-out var(--delay, 0s),
-              opacity 0.6s ease-out var(--delay, 0s);
+  transform: translateY(40px);
+  transition: transform 0.4s ease-out var(--delay, 0s),
+              opacity 0.4s ease-out var(--delay, 0s);
   will-change: transform, opacity;
 }
 .slide-in-section.is-visible {
