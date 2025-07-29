@@ -292,8 +292,8 @@ footer {
 .slide-in-section {
   opacity: 0;
   transform: translateY(40px);
-  transition: transform 0.4s ease-out var(--delay, 0s),
-              opacity 0.4s ease-out var(--delay, 0s);
+  transition: transform 0.34s ease-out var(--delay, 0s),
+              opacity 0.34s ease-out var(--delay, 0s);
   will-change: transform, opacity;
 }
 .slide-in-section.is-visible {
@@ -317,7 +317,7 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 2.125rem;
   background: rgba(0, 0, 0, 0.5);
   padding: 0.5rem 1rem;
   border-radius: 4px;
