@@ -2,203 +2,334 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="High-volume professional photo retouching services by Charles Cruz. Expert image editing for e-commerce and fashion brands."/>
-  <meta name="keywords" content="photo retouching, high volume retouching, ecommerce image editing, fashion post-production, color correction"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Charles Cruz — Head Photo Retoucher. High-volume e-commerce post-production for fashion, product, and lifestyle brands. 600+ images a week, engineered for consistency." />
+  <meta name="keywords" content="photo retoucher, high volume retouching, e-commerce retouching, fashion post-production, color correction, batch retouching, AI workflow" />
+  <meta property="og:title" content="Charles Cruz | High-Volume Retouching, Engineered" />
+  <meta property="og:description" content="Head Photo Retoucher owning e-commerce post-production end to end — 600+ images a week at peak." />
+  <meta property="og:type" content="website" />
+  <title>Charles Cruz | High-Volume Retouching, Engineered</title>
 
-  <title>Charles Cruz | Retouching Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
-
-
- <style>
-    /* HEADER STYLING */
-    header {
-      background-color: #111;
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-transform: uppercase;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      text-transform: uppercase;
-    }
-
-    /* IMAGE HOVER EFFECT */
-    .hover-effect {
-      position: relative;
-      display: inline-block;
-    }
-    .hover-effect img {
-      display: block;
-    }
-    .hover-effect .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity 0.3s;
-      font-size: 1.2rem;
-      text-align: center;
-    }
-    .hover-effect:hover .overlay {
-      opacity: 1;
-    }
-
-    /* BEFORE-AFTER SLIDER STYLING */
-    .before-after-section {
-      margin-top: 4rem;
-      text-align: center;
-    }
-    .ba-container {
-      position: relative;
-      max-width: 800px;
-      margin: 1.5rem auto;
-    }
-    .ba-container img {
-      width: 100%;
-      display: block;
-    }
-    .ba-slider {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 3px;
-      height: 100%;
-      background-color: white;
-      cursor: ew-resize;
-    }
-  </style>
-
-
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/new.css" />
 </head>
 <body>
 
-<nav class="main-nav">
-  <a href="index.html" class="logo">Charles Cruz</a>
-  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-    <span></span>
-    <span></span>
-    <span></span>
+<!-- ====== NAV ====== -->
+<nav class="nav" id="nav">
+  <a href="#top" class="nav__logo">Charles&nbsp;Cruz<span class="nav__logo-dot">.</span></a>
+  <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span>
   </button>
-  <ul class="nav-menu" id="navMenu">
-    <li><a href="index.html" class="active">Portfolio</a></li>
-    <li><a href="about.html">About Me</a></li>
+  <ul class="nav__menu" id="navMenu">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#compare">Before / After</a></li>
+    <li><a href="#systems">Systems</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a class="nav__cta" href="Charles%20Cruz%20Resume%202026.pdf" download>Resume</a></li>
   </ul>
 </nav>
 
-<h1 class="sr-only">High-Volume Photo Retouching Portfolio</h1>
+<!-- ====== HERO ====== -->
+<header class="hero" id="top">
+  <p class="hero__eyebrow reveal">Charles Cruz — Head Photo Retoucher</p>
+  <h1 class="hero__title">
+    <span class="reveal">High-volume</span>
+    <span class="reveal"><em>retouching,</em></span>
+    <span class="reveal">engineered<span class="accent">.</span></span>
+  </h1>
+  <p class="hero__sub reveal">I don't just retouch at scale — I build the pipeline that makes scale possible.
+     Head Photo Retoucher, final QC, and the systems in between.</p>
+  <div class="hero__actions reveal">
+    <a class="btn btn--solid" href="#work">See the work</a>
+    <a class="btn btn--ghost" href="#systems">How I run volume</a>
+  </div>
+  <div class="hero__scroll" aria-hidden="true"><span></span></div>
+</header>
 
-
-<section class="slide-in-section">
-  <h2>Overview</h2>
-  <p>With over a decade in professional image retouching, I specialize in high-throughput, on-brand post-production for fashion campaigns and e-commerce platforms. My work blends pixel-perfect attention with scalable workflows powered by automation and AI.</p>
-</section>
-
-<section class="slide-in-section">
-  <h2>E-Commerce Model</h2>
-  <div class="grid">
-    <div class="grid-item"><img loading="lazy" src="images/ecommerce/ecommerce1.webp" alt="High-volume e-commerce retouching example 1"><div class="overlay-text">Denim Editorial: Edit & Retouch</div></div>
-    <div class="grid-item"><img loading="lazy" src="images/ecommerce/ecommerce2.webp" alt="High-volume e-commerce retouching example 2"><div class="overlay-text">Studio Editorial: Retouching</div></div>
-    <div class="grid-item"><img loading="lazy" src="images/ecommerce/ecommerce3.webp" alt="High-volume e-commerce retouching example 3"><div class="overlay-text">Lifestyle: Edit & Retouch</div></div>
-    <div class="grid-item"><img loading="lazy" src="images/ecommerce/ecommerce4.webp" alt="High-volume e-commerce retouching example 4"><div class="overlay-text">Film Photography & Retouch</div></div>
-    <div class="grid-item"><img loading="lazy" src="images/ecommerce/ecommerce5.webp" alt="High-volume e-commerce retouching example 5"><div class="overlay-text">Film Photography & Retouch</div></div>
+<!-- ====== STATS BAND ====== -->
+<section class="stats" aria-label="Key numbers">
+  <div class="stats__grid">
+    <div class="stat reveal"><span class="stat__num" data-count="600" data-suffix="+">0</span><span class="stat__label">images retouched per week at peak</span></div>
+    <div class="stat reveal"><span class="stat__num" data-count="3">0</span><span class="stat__label">brand categories owned — Men's / Women's / Kids</span></div>
+    <div class="stat reveal"><span class="stat__num" data-count="100" data-suffix="%">0</span><span class="stat__label">of delivered imagery passes my final QC</span></div>
+    <div class="stat reveal"><span class="stat__num" data-count="5" data-suffix="+ yrs">0</span><span class="stat__label">full-time e-commerce retouching</span></div>
   </div>
 </section>
 
-<section class="slide-in-section">
-  <h2>Flatlays</h2>
-  <div class="grid">
-    <div class="grid-item"><img loading="lazy" src="images/flatlay/flatlay2.webp" alt="Flatlay retouching example 1"><div class="overlay-text">Flatlay Edit</div></div>
-    <div class="grid-item"><img loading="lazy" src="images/flatlay/flatlay1.webp" alt="Flatlay retouching example 2"><div class="overlay-text">Flatlay Edit</div></div>
-    <div class="grid-item"><img loading="lazy" src="images/flatlay/flatlay3.webp" alt="Flatlay retouching example 3"><div class="overlay-text">Color Matching</div></div>
-    <div class="grid-item"><img loading="lazy" src="images/flatlay/flatlay4.webp" alt="Flatlay retouching example 4"><div class="overlay-text">Flatlay Edit</div></div>
-    <div class="grid-item"><img loading="lazy" src="images/flatlay/flatlay5.webp" alt="Flatlay retouching example 5"><div class="overlay-text">Flatlay Edit</div></div>
+<!-- ====== WHAT I OWN ====== -->
+<section class="own section" id="own">
+  <div class="section__head reveal">
+    <span class="section__index">01</span>
+    <h2>What I own</h2>
   </div>
+  <p class="own__text reveal">At Rockstar Original, I'm the last set of eyes before anything goes live.
+     I own the daily retouching queue, wrote the company's retouching SOP, and built the automation —
+     actions, droplets, scripted batch exports, and naming systems — that keeps 600-image weeks
+     consistent instead of chaotic. When outside retouchers help with overflow, their work passes
+     through my QC before it ships.</p>
 </section>
 
-<section class="slide-in-section">
-  <h2>Jewelry</h2>
-  <div class="grid">
-    <div class="grid-item"><img loading="lazy" src="images/jewelry/jewelry1.webp" alt="Jewelry retouching example 1"><div class="overlay-text">View Full</div></div>
-    <div class="grid-item"><img loading="lazy" src="images/jewelry/jewelry2.webp" alt="Jewelry retouching example 2"><div class="overlay-text">View Full</div></div>
-    <div class="grid-item"><img loading="lazy" src="images/jewelry/jewelry3.webp" alt="Jewelry retouching example 3"><div class="overlay-text">View Full</div></div>
-    <div class="grid-item"><img loading="lazy" src="images/jewelry/jewelry4.webp" alt="Jewelry retouching example 4"><div class="overlay-text">View Full</div></div>
+<!-- ====== WORK ====== -->
+<section class="section" id="work">
+  <div class="section__head reveal">
+    <span class="section__index">02</span>
+    <h2>Selected work</h2>
   </div>
-</section>
 
-      <!-- BEFORE-AFTER SLIDER SECTION -->
-    <section class="before-after-section">
-      <h2>Before & After</h2>
+  <div class="work-group reveal">
+    <div class="work-group__head">
+      <h3>E-Commerce Model</h3>
+      <p>Campaign and PDP imagery: skin with restraint, garments cleaned, color true to product.</p>
+    </div>
+    <div class="grid grid--5">
+      <figure class="tile" tabindex="0"><img loading="lazy" src="images/ecommerce/ecommerce1.webp" alt="E-commerce model retouching — denim editorial" /><figcaption>Denim Editorial</figcaption></figure>
+      <figure class="tile" tabindex="0"><img loading="lazy" src="images/ecommerce/ecommerce2.webp" alt="E-commerce model retouching — studio editorial" /><figcaption>Studio Editorial</figcaption></figure>
+      <figure class="tile" tabindex="0"><img loading="lazy" src="images/ecommerce/ecommerce3.webp" alt="E-commerce model retouching — lifestyle" /><figcaption>Lifestyle</figcaption></figure>
+      <figure class="tile" tabindex="0"><img loading="lazy" src="images/ecommerce/ecommerce4.webp" alt="Film photography retouch" /><figcaption>Film &amp; Retouch</figcaption></figure>
+      <figure class="tile" tabindex="0"><img loading="lazy" src="images/ecommerce/ecommerce5.webp" alt="Film photography retouch" /><figcaption>Film &amp; Retouch</figcaption></figure>
+    </div>
+  </div>
 
-      <div class="ba-container">
-        <img loading="lazy" src="images/after3.webp" alt="Before retouching example 1" style="position:absolute; top:0; left:0;">
-        <img loading="lazy" src="images/before3.webp" alt="After retouching example 1" style="position:relative; clip-path: inset(0 50% 0 0);">
-        <div class="ba-slider"></div>
+  <div class="work-group reveal">
+    <div class="work-group__head">
+      <h3>Flatlays — the production line</h3>
+      <p>One export protocol, every product: retouch → 01 hero → numbered details. Hover to pause; every frame is a real 2026 final.</p>
+    </div>
+    <div class="flatline">
+      <div class="flatline__stat">
+        <span class="flatline__num">785</span>
+        <span class="flatline__caption">products flatlayed, retouched &amp; exported in 2026 alone — a sample of the line below</span>
       </div>
-
-      <div class="ba-container">
-        <img loading="lazy" src="images/after4.webp" alt="Before retouching example 2" style="position:absolute; top:0; left:0;">
-        <img loading="lazy" src="images/before4.webp" alt="After retouching example 2" style="position:relative; clip-path: inset(0 50% 0 0);">
-        <div class="ba-slider"></div>
+      <div class="flatline__belt" data-belt>
+        <div class="flatline__track">
+        <img src="images/flatlay2026/01.webp" width="560" height="840" decoding="async" alt="Flatlay — Acacius Black Relaxed Pant" title="Acacius Black Relaxed Pant" />
+        <img src="images/flatlay2026/02.webp" width="560" height="840" decoding="async" alt="Flatlay — All Seeing Eyes Black Cut Sleeve Short Set" title="All Seeing Eyes Black Cut Sleeve Short Set" />
+        <img src="images/flatlay2026/03.webp" width="560" height="840" decoding="async" alt="Flatlay — Amos Blue Graphic Hoodie" title="Amos Blue Graphic Hoodie" />
+        <img src="images/flatlay2026/04.webp" width="560" height="840" decoding="async" alt="Flatlay — Bleka Brown Graphic Hoodie" title="Bleka Brown Graphic Hoodie" />
+        <img src="images/flatlay2026/05.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Atramen Orange/Cream Stacked Hoodie Track Set" title="Boys Atramen Orange/Cream Stacked Hoodie Track Set" />
+        <img src="images/flatlay2026/06.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Borya Royal/Yellow Long Sleeve T-Shirt Track Set" title="Boys Borya Royal/Yellow Long Sleeve T-Shirt Track Set" />
+        <img src="images/flatlay2026/07.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Byson White/Brown T-Shirt Patchwork Jean Set" title="Boys Byson White/Brown T-Shirt Patchwork Jean Set" />
+        <img src="images/flatlay2026/08.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Deiter White/Black Long Sleeve Graphic T-Shirt Track Set" title="Boys Deiter White/Black Long Sleeve Graphic T-Shirt Track Set" />
+        <img src="images/flatlay2026/09.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Fintan Green/Cream Polo" title="Boys Fintan Green/Cream Polo" />
+        <img src="images/flatlay2026/10.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Glaston Navy Graphic T-Shirt" title="Boys Glaston Navy Graphic T-Shirt" />
+        <img src="images/flatlay2026/11.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Hooper Sky Blue Oversized T-Shirt/Short Set" title="Boys Hooper Sky Blue Oversized T-Shirt/Short Set" />
+        <img src="images/flatlay2026/12.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Loom Heather Grey Graphic Hoodie Track Set" title="Boys Loom Heather Grey Graphic Hoodie Track Set" />
+        <img src="images/flatlay2026/13.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Mikasso White/Navy Cut Off T-Shirt Short Set" title="Boys Mikasso White/Navy Cut Off T-Shirt Short Set" />
+        <img src="images/flatlay2026/14.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Pluto Light Blue/Blue Long Sleeve T-Shirt Stacked Jean Set" title="Boys Pluto Light Blue/Blue Long Sleeve T-Shirt Stacked Jean Set" />
+        <img src="images/flatlay2026/15.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Romeo Heather Grey Polo" title="Boys Romeo Heather Grey Polo" />
+        <img src="images/flatlay2026/16.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Shire Green/Cream Long Sleeve Graphic T-Shirt" title="Boys Shire Green/Cream Long Sleeve Graphic T-Shirt" />
+        <img src="images/flatlay2026/17.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Tim Beige Button Down T-Shirt/Short Set" title="Boys Tim Beige Button Down T-Shirt/Short Set" />
+        <img src="images/flatlay2026/18.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Ventoso Blue Windbreaker Jacket Track Set" title="Boys Ventoso Blue Windbreaker Jacket Track Set" />
+        <img src="images/flatlay2026/19.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Zesty Grey/Tint Long Sleeve T-Shirt Stacked Jean Set" title="Boys Zesty Grey/Tint Long Sleeve T-Shirt Stacked Jean Set" />
+        <img src="images/flatlay2026/20.webp" width="560" height="840" decoding="async" alt="Flatlay — Bubble Black Cut Sleeve T-Shirt Short Set" title="Bubble Black Cut Sleeve T-Shirt Short Set" />
+        <img src="images/flatlay2026/21.webp" width="560" height="840" decoding="async" alt="Flatlay — Climi Red Cut Sleeve T-Shirt/Short Set" title="Climi Red Cut Sleeve T-Shirt/Short Set" />
+        <img src="images/flatlay2026/22.webp" width="560" height="840" decoding="async" alt="Flatlay — Damir Navy Graphic Hoodie" title="Damir Navy Graphic Hoodie" />
+        <img src="images/flatlay2026/23.webp" width="560" height="840" decoding="async" alt="Flatlay — Edel White Cut Sleeve T-Shirt Short Set" title="Edel White Cut Sleeve T-Shirt Short Set" />
+        <img src="images/flatlay2026/24.webp" width="560" height="840" decoding="async" alt="Flatlay — Fields Grey/White Graphic Hoodie" title="Fields Grey/White Graphic Hoodie" />
+        </div>
       </div>
-      
-      <div class="ba-container">
-        <img loading="lazy" src="images/after1.webp" alt="Before retouching example 3" style="position:absolute; top:0; left:0;">
-        <img loading="lazy" src="images/before1.webp" alt="After retouching example 3" style="position:relative; clip-path: inset(0 50% 0 0);">
-        <div class="ba-slider"></div>
+      <div class="flatline__belt flatline__belt--reverse" data-belt>
+        <div class="flatline__track">
+        <img src="images/flatlay2026/25.webp" width="560" height="840" decoding="async" alt="Flatlay — Gilrs Vayla White/Purple Graphic T-Shirt" title="Gilrs Vayla White/Purple Graphic T-Shirt" />
+        <img src="images/flatlay2026/26.webp" width="560" height="840" decoding="async" alt="Flatlay — Girls Aze White Graphic T-Shirt" title="Girls Aze White Graphic T-Shirt" />
+        <img src="images/flatlay2026/27.webp" width="560" height="840" decoding="async" alt="Flatlay — Girls Dezz White/Light Wash Long Sleeve T-Shirt Stacked Jean Set" title="Girls Dezz White/Light Wash Long Sleeve T-Shirt Stacked Jean Set" />
+        <img src="images/flatlay2026/28.webp" width="560" height="840" decoding="async" alt="Flatlay — Girls Kairose Light Yellow/Grey Graphic T-Shirt" title="Girls Kairose Light Yellow/Grey Graphic T-Shirt" />
+        <img src="images/flatlay2026/29.webp" width="560" height="840" decoding="async" alt="Flatlay — Girls Maniera Pink/White Zip Up Hoodie Relaxed Pant Track Set" title="Girls Maniera Pink/White Zip Up Hoodie Relaxed Pant Track Set" />
+        <img src="images/flatlay2026/30.webp" width="560" height="840" decoding="async" alt="Flatlay — Girls Rommy Royal Blue Polo" title="Girls Rommy Royal Blue Polo" />
+        <img src="images/flatlay2026/31.webp" width="560" height="840" decoding="async" alt="Flatlay — Girls Vayla Yellow/Royal Graphic T-Shirt" title="Girls Vayla Yellow/Royal Graphic T-Shirt" />
+        <img src="images/flatlay2026/32.webp" width="560" height="840" decoding="async" alt="Flatlay — Gulis Royal Rhinestone Cut Sleeve T-Shirt Short Set" title="Gulis Royal Rhinestone Cut Sleeve T-Shirt Short Set" />
+        <img src="images/flatlay2026/33.webp" width="560" height="840" decoding="async" alt="Flatlay — Izan White Zip Up Short Sleeve Twill Short Set" title="Izan White Zip Up Short Sleeve Twill Short Set" />
+        <img src="images/flatlay2026/34.webp" width="560" height="840" decoding="async" alt="Flatlay — Kamari Dark Blue Rhinestone Stacked Fit Jean" title="Kamari Dark Blue Rhinestone Stacked Fit Jean" />
+        <img src="images/flatlay2026/35.webp" width="560" height="840" decoding="async" alt="Flatlay — Lake Black/Pink Graphic Slides" title="Lake Black/Pink Graphic Slides" />
+        <img src="images/flatlay2026/36.webp" width="560" height="840" decoding="async" alt="Flatlay — Leslaw White Graphic Slides" title="Leslaw White Graphic Slides" />
+        <img src="images/flatlay2026/37.webp" width="560" height="840" decoding="async" alt="Flatlay — Marzion Black Graphic Hoodie" title="Marzion Black Graphic Hoodie" />
+        <img src="images/flatlay2026/38.webp" width="560" height="840" decoding="async" alt="Flatlay — Montae Black Oversized Graphic T-Shirt" title="Montae Black Oversized Graphic T-Shirt" />
+        <img src="images/flatlay2026/39.webp" width="560" height="840" decoding="async" alt="Flatlay — Olivier Dark Grey Patch Rhinestone Denim Jacket/Stacked Flare Jean Set" title="Olivier Dark Grey Patch Rhinestone Denim Jacket/Stacked Flare Jean Set" />
+        <img src="images/flatlay2026/40.webp" width="560" height="840" decoding="async" alt="Flatlay — Racing Grung Black Graphic Cut Sleeve T-Shirt Short Set" title="Racing Grung Black Graphic Cut Sleeve T-Shirt Short Set" />
+        <img src="images/flatlay2026/41.webp" width="560" height="840" decoding="async" alt="Flatlay — Renia Black Denim Jort" title="Renia Black Denim Jort" />
+        <img src="images/flatlay2026/42.webp" width="560" height="840" decoding="async" alt="Flatlay — Santos Heather Grey Graphic Hoodie" title="Santos Heather Grey Graphic Hoodie" />
+        <img src="images/flatlay2026/43.webp" width="560" height="840" decoding="async" alt="Flatlay — Semental Faded Camo Rhinestone Jort" title="Semental Faded Camo Rhinestone Jort" />
+        <img src="images/flatlay2026/44.webp" width="560" height="840" decoding="async" alt="Flatlay — Sharae Pink Cheetah Baby Tee Shirt" title="Sharae Pink Cheetah Baby Tee Shirt" />
+        <img src="images/flatlay2026/45.webp" width="560" height="840" decoding="async" alt="Flatlay — States Purple Graphic Hoodie" title="States Purple Graphic Hoodie" />
+        <img src="images/flatlay2026/46.webp" width="560" height="840" decoding="async" alt="Flatlay — Torq Black/Orange Graphic Hoodie" title="Torq Black/Orange Graphic Hoodie" />
+        <img src="images/flatlay2026/47.webp" width="560" height="840" decoding="async" alt="Flatlay — Verseney Black Polo Shirt" title="Verseney Black Polo Shirt" />
+        <img src="images/flatlay2026/48.webp" width="560" height="840" decoding="async" alt="Flatlay — Womens Firewalk Pink Suede Mule" title="Womens Firewalk Pink Suede Mule" />
+        </div>
       </div>
-    </section>
-
-
-<footer>
-  <div class="contact-buttons">
-    <!-- Icon button to open the user's default mail client -->
-    <a href="mailto:charlescruz.k@me.com" class="btn btn-mail" aria-label="Send email">
-      <!-- Mail icon from Tabler Icons (outline style) -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-        <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
-        <path d="M3 7l9 6l9 -6" />
-      </svg>
-    </a>
-    <!-- Icon button linking to LinkedIn profile; opens in a new tab/window -->
-    <a href="https://linkedin.com/in/charlescruzk" class="btn btn-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
-      <!-- LinkedIn brand icon from Tabler Icons (outline style) -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-        <path d="M8 11v5" />
-        <path d="M8 8v.01" />
-        <path d="M12 16v-5" />
-        <path d="M16 16v-3a2 2 0 1 0 -4 0" />
-        <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
-      </svg>
-    </a>
+    </div>
   </div>
+
+  <div class="work-group reveal">
+    <div class="work-group__head">
+      <h3>Jewelry</h3>
+      <p>Macro cleanup and shine control where a half-pixel of dust reads on screen.</p>
+    </div>
+    <div class="grid grid--4">
+      <figure class="tile" tabindex="0"><img loading="lazy" src="images/jewelry/jewelry1.webp" alt="Jewelry retouching" /><figcaption>Jewelry</figcaption></figure>
+      <figure class="tile" tabindex="0"><img loading="lazy" src="images/jewelry/jewelry2.webp" alt="Jewelry retouching" /><figcaption>Jewelry</figcaption></figure>
+      <figure class="tile" tabindex="0"><img loading="lazy" src="images/jewelry/jewelry3.webp" alt="Jewelry retouching" /><figcaption>Jewelry</figcaption></figure>
+      <figure class="tile" tabindex="0"><img loading="lazy" src="images/jewelry/jewelry4.webp" alt="Jewelry retouching" /><figcaption>Jewelry</figcaption></figure>
+    </div>
+  </div>
+
+  <!-- In-production placeholders (Phase 4 slots) -->
+  <div class="work-group reveal">
+    <div class="work-group__head">
+      <h3>In production</h3>
+      <p>New sets currently moving through the pipeline.</p>
+    </div>
+    <div class="grid grid--3">
+      <div class="tile tile--placeholder" aria-label="Footwear set — in production"><span>Footwear<br/>Set</span></div>
+      <div class="tile tile--placeholder" aria-label="Model retouch series — in production"><span>Model Retouch<br/>Series</span></div>
+      <div class="tile tile--placeholder" aria-label="Composite build — in production"><span>Composite<br/>Build</span></div>
+    </div>
+  </div>
+
+  <!-- Volume proof: one shoot day, full-bleed lineups -->
+  <div class="lineup reveal">
+    <div class="lineup__head">
+      <h3>One shoot day<span class="accent">.</span></h3>
+      <p>Each strip is a single production day — retouched, QC'd, and delivered platform-ready.</p>
+    </div>
+    <figure class="lineup__figure tile-zoom" tabindex="0" aria-label="Open men's lineup in viewer">
+      <img loading="lazy" src="images/260625M_lineup.webp" alt="Contact-sheet lineup of 29 finished men's e-commerce images from one shoot day" />
+      <span class="lineup__label">Men's — 29 finals</span>
+    </figure>
+    <figure class="lineup__figure tile-zoom" tabindex="0" aria-label="Open women's lineup in viewer">
+      <img loading="lazy" src="images/260610W_lineup.webp" alt="Contact-sheet lineup of 30 finished women's activewear e-commerce images from one shoot day" />
+      <span class="lineup__label">Women's — 30 finals</span>
+    </figure>
+  </div>
+</section>
+
+<!-- ====== BEFORE / AFTER ====== -->
+<section class="section" id="compare">
+  <div class="section__head reveal">
+    <span class="section__index">03</span>
+    <h2>Before / After</h2>
+  </div>
+  <p class="section__lede reveal">Drag to compare. The goal is polish you can't point to.</p>
+
+  <div class="ba-grid">
+    <div class="ba reveal" data-ba>
+      <img class="ba__after" src="images/after3.webp" alt="After retouching" draggable="false" />
+      <img class="ba__before" src="images/before3.webp" alt="Before retouching" draggable="false" />
+      <div class="ba__handle" role="slider" aria-label="Comparison slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"><span></span></div>
+      <span class="ba__tag ba__tag--before">Before</span>
+      <span class="ba__tag ba__tag--after">After</span>
+    </div>
+    <div class="ba reveal" data-ba>
+      <img class="ba__after" src="images/after4.webp" alt="After retouching" draggable="false" />
+      <img class="ba__before" src="images/before4.webp" alt="Before retouching" draggable="false" />
+      <div class="ba__handle" role="slider" aria-label="Comparison slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"><span></span></div>
+      <span class="ba__tag ba__tag--before">Before</span>
+      <span class="ba__tag ba__tag--after">After</span>
+    </div>
+    <div class="ba reveal" data-ba>
+      <img class="ba__after" src="images/after1.webp" alt="After retouching" draggable="false" />
+      <img class="ba__before" src="images/before1.webp" alt="Before retouching" draggable="false" />
+      <div class="ba__handle" role="slider" aria-label="Comparison slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"><span></span></div>
+      <span class="ba__tag ba__tag--before">Before</span>
+      <span class="ba__tag ba__tag--after">After</span>
+    </div>
+    <div class="ba reveal" data-ba>
+      <img class="ba__after" src="images/after2.webp" alt="After retouching" draggable="false" />
+      <img class="ba__before" src="images/before2.webp" alt="Before retouching" draggable="false" />
+      <div class="ba__handle" role="slider" aria-label="Comparison slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"><span></span></div>
+      <span class="ba__tag ba__tag--before">Before</span>
+      <span class="ba__tag ba__tag--after">After</span>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SYSTEMS / CASE STUDY TEASER ====== -->
+<section class="section systems" id="systems">
+  <div class="section__head reveal">
+    <span class="section__index">04</span>
+    <h2>Built for volume</h2>
+  </div>
+  <div class="systems__inner">
+    <p class="systems__lede reveal">Volume doesn't come from working faster — it comes from building a
+       system that never makes the same decision twice.</p>
+    <div class="systems__cols">
+      <div class="systems__col reveal">
+        <h4>The standard</h4>
+        <p>I wrote the retouching SOP: repeatable decisions for color, skin, cleanup, and handoff, so
+           quality doesn't depend on mood or memory.</p>
+      </div>
+      <div class="systems__col reveal">
+        <h4>The automation</h4>
+        <p>Photoshop actions and droplets for repeat operations. Scripted batch exports that removed
+           recorded-action limits. Naming and folder systems that make any asset findable in seconds,
+           backed by a Drive-based recall and versioning system — tied together with custom internal
+           tooling I coded with AI-assisted development.</p>
+      </div>
+      <div class="systems__col reveal">
+        <h4>The AI layer</h4>
+        <p>AI belongs in the pipeline — scripting, automation, repetitive ops. It doesn't get final
+           judgment on skin, color, or brand look. That stays human.</p>
+      </div>
+      <div class="systems__col reveal">
+        <h4>The result</h4>
+        <p>600+ image weeks. One consistent brand look across three categories. External overflow
+           QC'd to the same bar before it ships.</p>
+      </div>
+    </div>
+    <p class="systems__more reveal">Full case study — coming soon.</p>
+  </div>
+</section>
+
+<!-- ====== ABOUT ====== -->
+<section class="section about" id="about">
+  <div class="section__head reveal">
+    <span class="section__index">05</span>
+    <h2>About</h2>
+  </div>
+  <div class="about__inner">
+    <figure class="about__photo reveal">
+      <img loading="lazy" src="images/me.webp" alt="Charles Cruz at work retouching" />
+    </figure>
+    <div class="about__text">
+      <p class="reveal">I'm Charles — a retoucher who came up through photography, so I edit with the
+         shot's intent in mind, not just its pixels. Four years in the U.S. Navy taught me what
+         "handles volume without dropping standards" actually means; I've been applying it to imagery
+         ever since.</p>
+      <p class="reveal">When I'm not elbow-deep in Photoshop layers, I'm hunting down the perfect cup
+         of coffee and calling it part of my creative process.</p>
+      <p class="reveal">Fun fact: during my Navy years I had a near-death experience. Apparently Heaven
+         had a waiting list — God told me there were photos that still needed retouching.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CONTACT ====== -->
+<section class="section contact" id="contact">
+  <div class="contact__inner reveal">
+    <h2>Have a catalog<br/>that needs to <em>move</em><span class="accent">?</span></h2>
+    <p>I'm open to senior retouching and photo-editor roles, remote or LA-based.</p>
+    <div class="contact__actions">
+      <a class="btn btn--solid" href="mailto:charlescruz.k@me.com">Email me</a>
+      <a class="btn btn--ghost" href="https://linkedin.com/in/charlescruzk" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="btn btn--ghost" href="Charles%20Cruz%20Resume%202026.pdf" download>Resume&nbsp;(PDF)</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <span>© 2026 Charles Cruz — Baldwin Park, CA</span>
+  <a href="#top">Back to top ↑</a>
 </footer>
 
-<div id="lightbox" class="lightbox">
-  <span class="close">&times;</span>
-  <img loading="lazy" class="lightbox-content" id="lightbox-img" />
+<!-- ====== LIGHTBOX ====== -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox__close" aria-label="Close viewer">&times;</button>
+  <img class="lightbox__img" id="lightboxImg" alt="" />
 </div>
 
-<script src="js/script-combined.js" defer></script>
-
-<script src="js/slidein.js" defer></script>
-
+<script src="js/new.js" defer></script>
 </body>
 </html>
