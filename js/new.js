@@ -167,6 +167,23 @@
     });
   });
 
+  /* Expand button on every before/after slider: opens the delivered image */
+  document.querySelectorAll('[data-ba]').forEach(function (ba) {
+    var after = ba.querySelector('.ba__after');
+    if (!after) return;
+    var btn = document.createElement('button');
+    btn.className = 'ba__expand';
+    btn.type = 'button';
+    btn.setAttribute('aria-label', 'View delivered image full size');
+    btn.textContent = '⤢';
+    btn.addEventListener('pointerdown', function (e) { e.stopPropagation(); });
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      openLightbox(after.src, after.alt);
+    });
+    ba.appendChild(btn);
+  });
+
   closeBtn.addEventListener('click', closeLightbox);
   lightbox.addEventListener('click', function (e) {
     if (e.target === lightbox) closeLightbox();
