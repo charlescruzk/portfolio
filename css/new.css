@@ -429,6 +429,7 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; line-height: 1.08;
 }
 @media (max-width: 540px) {
   .grid--5 { grid-template-columns: repeat(2, 1fr); }
+  .grid--3 { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ---------- AI Campaigns (Concept → Generate → Retouch) ---------- */
