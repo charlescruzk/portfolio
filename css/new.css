@@ -446,6 +446,17 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; line-height: 1.08;
   .grid--5 { grid-template-columns: repeat(2, 1fr); }
   .grid--3 { grid-template-columns: repeat(2, 1fr); }
 }
+/* A single row that would orphan tiles when it wraps: swipe instead */
+@media (max-width: 1100px) {
+  .grid--swipe {
+    grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 34%;
+    overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px;
+  }
+  .grid--swipe > .tile { scroll-snap-align: start; }
+}
+@media (max-width: 540px) {
+  .grid--swipe { grid-auto-columns: 64%; }
+}
 
 /* ---------- AI Campaigns (Concept → Generate → Retouch) ---------- */
 .aigen__steps {
