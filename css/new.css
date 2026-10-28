@@ -416,6 +416,12 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; line-height: 1.08;
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1100px) {
+  /* Tablet: keep the full nav on one line until the hamburger takes over at 820 */
+  .nav__menu { gap: 1rem; }
+  .nav__menu a { white-space: nowrap; letter-spacing: .08em; }
+}
+@media (max-width: 900px) {
+  .nav__menu { gap: .7rem; }
   .grid--5 { grid-template-columns: repeat(3, 1fr); }
   .grid--4 { grid-template-columns: repeat(2, 1fr); }
 }
