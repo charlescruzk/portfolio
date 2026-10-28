@@ -243,7 +243,17 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; line-height: 1.08;
   will-change: transform;
 }
 .flatline__belt--reverse .flatline__track { animation-direction: reverse; }
-.flatline__belt:hover .flatline__track { animation-play-state: paused; }
+.flatline__belt:hover .flatline__track,
+.flatline__belt.is-paused .flatline__track { animation-play-state: paused; }
+.flatline__toggle {
+  margin-left: auto; align-self: center;
+  background: none; border: 1px solid var(--line); border-radius: 999px;
+  color: var(--muted); font: inherit; font-size: .72rem;
+  text-transform: uppercase; letter-spacing: .14em;
+  padding: .35rem .85rem; cursor: pointer;
+  transition: color .25s ease, border-color .25s ease;
+}
+.flatline__toggle:hover, .flatline__toggle:focus-visible { color: var(--accent); border-color: var(--accent); }
 .flatline__track img {
   height: 230px; width: auto; border-radius: var(--radius);
   background: var(--surface-2);
@@ -343,7 +353,6 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; line-height: 1.08;
   margin-bottom: .6rem;
 }
 .systems__col p { color: var(--muted); margin: 0; font-size: .98rem; }
-.systems__more { margin-top: 3rem; color: var(--muted); font-size: .85rem; text-transform: uppercase; letter-spacing: .14em; }
 
 /* ---------- About ---------- */
 .about__inner {
@@ -387,11 +396,17 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; line-height: 1.08;
 }
 
 /* ---------- Reveal animation ---------- */
-.reveal {
+/* Hidden only when JS is running (the .js class is set inline in <head>) */
+.js .reveal {
   opacity: 0; transform: translateY(28px);
   transition: opacity .7s ease, transform .7s cubic-bezier(.2,.6,.2,1);
 }
 .reveal.is-visible { opacity: 1; transform: none; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

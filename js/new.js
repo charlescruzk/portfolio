@@ -6,6 +6,9 @@
 
   var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // Tells the inline <head> failsafe that reveals will be handled
+  document.documentElement.setAttribute('data-ready', '');
+
   /* ---------- Nav: hide on scroll down, show on scroll up ---------- */
   var nav = document.getElementById('nav');
   var navToggle = document.getElementById('navToggle');
@@ -51,11 +54,26 @@
     revealEls.forEach(function (el) { io.observe(el); });
   }
 
-  /* ---------- Stat counters ---------- */
+  /* ---------- Stat counters ----------
+     The real value ships in the HTML (no-JS, crawlers, text extraction). When we
+     animate, the counting digits are hidden from assistive tech and a static
+     copy of the final value is read instead. */
+  var statEls = document.querySelectorAll('.stat__num');
+  var willAnimate = !prefersReduced && 'IntersectionObserver' in window;
+
+  statEls.forEach(function (el) {
+    if (!willAnimate) return;
+    var sr = document.createElement('span');
+    sr.className = 'sr-only';
+    sr.textContent = el.textContent;
+    el.parentNode.insertBefore(sr, el);
+    el.setAttribute('aria-hidden', 'true');
+    el.textContent = '0' + (el.dataset.suffix || '');
+  });
+
   function animateCount(el) {
     var target = parseInt(el.dataset.count, 10);
     var suffix = el.dataset.suffix || '';
-    if (prefersReduced) { el.textContent = target + suffix; return; }
     var start = null;
     var dur = 1400;
     function step(ts) {
@@ -69,8 +87,7 @@
     requestAnimationFrame(step);
   }
 
-  var statEls = document.querySelectorAll('.stat__num');
-  if ('IntersectionObserver' in window) {
+  if (willAnimate) {
     var statIO = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
@@ -80,8 +97,6 @@
       });
     }, { threshold: 0.5 });
     statEls.forEach(function (el) { statIO.observe(el); });
-  } else {
-    statEls.forEach(animateCount);
   }
 
   /* ---------- Before / After draggable sliders ---------- */
@@ -129,9 +144,24 @@
     Array.prototype.slice.call(track.children).forEach(function (node) {
       var clone = node.cloneNode(true);
       clone.setAttribute('aria-hidden', 'true');
+      clone.alt = '';
       track.appendChild(clone);
     });
   });
+
+  // Hover pauses for mouse users; this button covers keyboard and touch (WCAG 2.2.2)
+  var beltToggle = document.getElementById('beltToggle');
+  if (beltToggle) {
+    beltToggle.hidden = prefersReduced;
+    var paused = false;
+    beltToggle.addEventListener('click', function () {
+      paused = !paused;
+      beltToggle.textContent = paused ? 'Play' : 'Pause';
+      document.querySelectorAll('[data-belt]').forEach(function (belt) {
+        belt.classList.toggle('is-paused', paused);
+      });
+    });
+  }
 
   /* ---------- Lightbox ---------- */
   var lightbox = document.getElementById('lightbox');

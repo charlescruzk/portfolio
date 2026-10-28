@@ -14,6 +14,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/new.css" />
+  <!-- Reveal animations only hide content once JS is confirmed; if js/new.js never
+       arrives, the class is dropped so nothing stays invisible. -->
+  <script>
+    document.documentElement.classList.add('js');
+    setTimeout(function () {
+      if (!document.documentElement.hasAttribute('data-ready')) document.documentElement.classList.remove('js');
+    }, 3000);
+  </script>
 </head>
 <body>
 
@@ -54,10 +62,10 @@
 <!-- ====== STATS BAND ====== -->
 <section class="stats" aria-label="Key numbers">
   <div class="stats__grid">
-    <div class="stat reveal"><span class="stat__num" data-count="600" data-suffix="+">0</span><span class="stat__label">images retouched per week at peak</span></div>
-    <div class="stat reveal"><span class="stat__num" data-count="3">0</span><span class="stat__label">brand categories owned — Men's / Women's / Kids</span></div>
-    <div class="stat reveal"><span class="stat__num" data-count="100" data-suffix="%">0</span><span class="stat__label">of delivered imagery passes my final QC</span></div>
-    <div class="stat reveal"><span class="stat__num" data-count="5" data-suffix="+ yrs">0</span><span class="stat__label">full-time e-commerce retouching</span></div>
+    <div class="stat reveal"><span class="stat__num" data-count="600" data-suffix="+">600+</span><span class="stat__label">images retouched per week at peak</span></div>
+    <div class="stat reveal"><span class="stat__num" data-count="3">3</span><span class="stat__label">brand categories owned — Men's / Women's / Kids</span></div>
+    <div class="stat reveal"><span class="stat__num" data-count="100" data-suffix="%">100%</span><span class="stat__label">of delivered imagery passes through my final QC</span></div>
+    <div class="stat reveal"><span class="stat__num" data-count="5" data-suffix="+ yrs">5+ yrs</span><span class="stat__label">full-time e-commerce retouching</span></div>
   </div>
 </section>
 
@@ -88,11 +96,11 @@
     </div>
     <div class="grid grid--3">
       <figure class="tile" tabindex="0"><img loading="lazy" src="images/after5.webp" alt="E-commerce model retouching — leopard print romper, low-light editorial" /><figcaption>Night Editorial</figcaption></figure>
-      <figure class="tile" tabindex="0"><img loading="lazy" src="images/ecommerce/ecommerce1.webp" alt="E-commerce model retouching — denim editorial" /><figcaption>Denim Editorial</figcaption></figure>
-      <figure class="tile" tabindex="0"><img loading="lazy" src="images/ecommerce/ecommerce2.webp" alt="E-commerce model retouching — studio editorial" /><figcaption>Studio Editorial</figcaption></figure>
-      <figure class="tile" tabindex="0"><img loading="lazy" src="images/ecommerce/ecommerce3.webp" alt="E-commerce model retouching — lifestyle" /><figcaption>Lifestyle</figcaption></figure>
-      <figure class="tile" tabindex="0"><img loading="lazy" src="images/ecommerce/ecommerce4.webp" alt="Film photography retouch" /><figcaption>Film &amp; Retouch</figcaption></figure>
-      <figure class="tile" tabindex="0"><img loading="lazy" src="images/ecommerce/ecommerce5.webp" alt="Film photography retouch" /><figcaption>Film &amp; Retouch</figcaption></figure>
+      <figure class="tile" tabindex="0"><img loading="lazy" src="images/ecommerce/ecommerce1.webp" alt="Denim editorial — model seated on a pile of denim, studio backdrop" /><figcaption>Denim Editorial</figcaption></figure>
+      <figure class="tile" tabindex="0"><img loading="lazy" src="images/ecommerce/ecommerce2.webp" alt="Studio editorial — two models in black puffer jackets on a lilac backdrop" /><figcaption>Studio Editorial</figcaption></figure>
+      <figure class="tile" tabindex="0"><img loading="lazy" src="images/ecommerce/ecommerce3.webp" alt="Lifestyle — model in a white graphic tee and orange joggers at a roadside service station" /><figcaption>Lifestyle</figcaption></figure>
+      <figure class="tile" tabindex="0"><img loading="lazy" src="images/ecommerce/ecommerce4.webp" alt="Streetwear editorial — black graphic hoodie set in a graffiti tunnel" /><figcaption>Film &amp; Retouch</figcaption></figure>
+      <figure class="tile" tabindex="0"><img loading="lazy" src="images/ecommerce/ecommerce5.webp" alt="Streetwear editorial — black graphic hoodie set, seated by a gate in a graffiti tunnel" /><figcaption>Film &amp; Retouch</figcaption></figure>
     </div>
   </div>
 
@@ -105,61 +113,62 @@
       <div class="flatline__stat">
         <span class="flatline__num">785</span>
         <span class="flatline__caption">products flatlayed, retouched &amp; exported in 2026 alone — a sample of the line below</span>
+        <button class="flatline__toggle" id="beltToggle" type="button" hidden>Pause</button>
       </div>
       <div class="flatline__belt" data-belt>
         <div class="flatline__track">
-        <img src="images/flatlay2026/01.webp" width="560" height="840" decoding="async" alt="Flatlay — Acacius Black Relaxed Pant" title="Acacius Black Relaxed Pant" />
-        <img src="images/flatlay2026/02.webp" width="560" height="840" decoding="async" alt="Flatlay — All Seeing Eyes Black Cut Sleeve Short Set" title="All Seeing Eyes Black Cut Sleeve Short Set" />
-        <img src="images/flatlay2026/03.webp" width="560" height="840" decoding="async" alt="Flatlay — Amos Blue Graphic Hoodie" title="Amos Blue Graphic Hoodie" />
-        <img src="images/flatlay2026/04.webp" width="560" height="840" decoding="async" alt="Flatlay — Bleka Brown Graphic Hoodie" title="Bleka Brown Graphic Hoodie" />
-        <img src="images/flatlay2026/05.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Atramen Orange/Cream Stacked Hoodie Track Set" title="Boys Atramen Orange/Cream Stacked Hoodie Track Set" />
-        <img src="images/flatlay2026/06.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Borya Royal/Yellow Long Sleeve T-Shirt Track Set" title="Boys Borya Royal/Yellow Long Sleeve T-Shirt Track Set" />
-        <img src="images/flatlay2026/07.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Byson White/Brown T-Shirt Patchwork Jean Set" title="Boys Byson White/Brown T-Shirt Patchwork Jean Set" />
-        <img src="images/flatlay2026/08.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Deiter White/Black Long Sleeve Graphic T-Shirt Track Set" title="Boys Deiter White/Black Long Sleeve Graphic T-Shirt Track Set" />
-        <img src="images/flatlay2026/09.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Fintan Green/Cream Polo" title="Boys Fintan Green/Cream Polo" />
-        <img src="images/flatlay2026/10.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Glaston Navy Graphic T-Shirt" title="Boys Glaston Navy Graphic T-Shirt" />
-        <img src="images/flatlay2026/11.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Hooper Sky Blue Oversized T-Shirt/Short Set" title="Boys Hooper Sky Blue Oversized T-Shirt/Short Set" />
-        <img src="images/flatlay2026/12.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Loom Heather Grey Graphic Hoodie Track Set" title="Boys Loom Heather Grey Graphic Hoodie Track Set" />
-        <img src="images/flatlay2026/13.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Mikasso White/Navy Cut Off T-Shirt Short Set" title="Boys Mikasso White/Navy Cut Off T-Shirt Short Set" />
-        <img src="images/flatlay2026/14.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Pluto Light Blue/Blue Long Sleeve T-Shirt Stacked Jean Set" title="Boys Pluto Light Blue/Blue Long Sleeve T-Shirt Stacked Jean Set" />
-        <img src="images/flatlay2026/15.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Romeo Heather Grey Polo" title="Boys Romeo Heather Grey Polo" />
-        <img src="images/flatlay2026/16.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Shire Green/Cream Long Sleeve Graphic T-Shirt" title="Boys Shire Green/Cream Long Sleeve Graphic T-Shirt" />
-        <img src="images/flatlay2026/17.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Tim Beige Button Down T-Shirt/Short Set" title="Boys Tim Beige Button Down T-Shirt/Short Set" />
-        <img src="images/flatlay2026/18.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Ventoso Blue Windbreaker Jacket Track Set" title="Boys Ventoso Blue Windbreaker Jacket Track Set" />
-        <img src="images/flatlay2026/19.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Zesty Grey/Tint Long Sleeve T-Shirt Stacked Jean Set" title="Boys Zesty Grey/Tint Long Sleeve T-Shirt Stacked Jean Set" />
-        <img src="images/flatlay2026/20.webp" width="560" height="840" decoding="async" alt="Flatlay — Bubble Black Cut Sleeve T-Shirt Short Set" title="Bubble Black Cut Sleeve T-Shirt Short Set" />
-        <img src="images/flatlay2026/21.webp" width="560" height="840" decoding="async" alt="Flatlay — Climi Red Cut Sleeve T-Shirt/Short Set" title="Climi Red Cut Sleeve T-Shirt/Short Set" />
-        <img src="images/flatlay2026/22.webp" width="560" height="840" decoding="async" alt="Flatlay — Damir Navy Graphic Hoodie" title="Damir Navy Graphic Hoodie" />
-        <img src="images/flatlay2026/23.webp" width="560" height="840" decoding="async" alt="Flatlay — Edel White Cut Sleeve T-Shirt Short Set" title="Edel White Cut Sleeve T-Shirt Short Set" />
-        <img src="images/flatlay2026/24.webp" width="560" height="840" decoding="async" alt="Flatlay — Fields Grey/White Graphic Hoodie" title="Fields Grey/White Graphic Hoodie" />
+        <img src="images/flatlay2026/01.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Atramen Orange/Cream Stacked Hoodie Track Set" title="Boys Atramen Orange/Cream Stacked Hoodie Track Set" />
+        <img src="images/flatlay2026/02.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Kabir Black Graphic T-Shirt" title="Boys Kabir Black Graphic T-Shirt" />
+        <img src="images/flatlay2026/03.webp" width="560" height="840" decoding="async" alt="Flatlay — Periz Dark Blue Painter Stacked Flare Jean" title="Periz Dark Blue Painter Stacked Flare Jean" />
+        <img src="images/flatlay2026/04.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Onyx Sand Graphic Hoodie" title="Boys Onyx Sand Graphic Hoodie" />
+        <img src="images/flatlay2026/05.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Igor Royal Blue Varsity Jacket" title="Boys Igor Royal Blue Varsity Jacket" />
+        <img src="images/flatlay2026/06.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Madar Navy Rhinestone Super Baggy Track Pant" title="Boys Madar Navy Rhinestone Super Baggy Track Pant" />
+        <img src="images/flatlay2026/07.webp" width="560" height="840" decoding="async" alt="Flatlay — Vankeva Grey Slides" title="Vankeva Grey Slides" />
+        <img src="images/flatlay2026/08.webp" width="560" height="840" decoding="async" alt="Flatlay — Fenrir Navy Rhinestone Hoodie/Baggy Pant Track Set" title="Fenrir Navy Rhinestone Hoodie/Baggy Pant Track Set" />
+        <img src="images/flatlay2026/09.webp" width="560" height="840" decoding="async" alt="Flatlay — Girls Plota Pink Cut Sleeve Tee" title="Girls Plota Pink Cut Sleeve Tee" />
+        <img src="images/flatlay2026/10.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Fin Black Barrel Fit Jean" title="Boys Fin Black Barrel Fit Jean" />
+        <img src="images/flatlay2026/11.webp" width="560" height="840" decoding="async" alt="Flatlay — Lovette Blue Rhinestone Trucker Hat" title="Lovette Blue Rhinestone Trucker Hat" />
+        <img src="images/flatlay2026/12.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Byson Beige/Tint T-Shirt Patchwork Jean Set" title="Boys Byson Beige/Tint T-Shirt Patchwork Jean Set" />
+        <img src="images/flatlay2026/13.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Borya Navy Zip Up Hoodie" title="Boys Borya Navy Zip Up Hoodie" />
+        <img src="images/flatlay2026/14.webp" width="560" height="840" decoding="async" alt="Flatlay — Emre Red Flannel Short Sleeve Shirt" title="Emre Red Flannel Short Sleeve Shirt" />
+        <img src="images/flatlay2026/15.webp" width="560" height="840" decoding="async" alt="Flatlay — Erving Green Wash Baggy Fit Jean" title="Erving Green Wash Baggy Fit Jean" />
+        <img src="images/flatlay2026/16.webp" width="560" height="840" decoding="async" alt="Flatlay — Girls Zyriah Yellow Rhinestone Lounge Track Set" title="Girls Zyriah Yellow Rhinestone Lounge Track Set" />
+        <img src="images/flatlay2026/17.webp" width="560" height="840" decoding="async" alt="Flatlay — Henderson Black/Red Varsity Jacket" title="Henderson Black/Red Varsity Jacket" />
+        <img src="images/flatlay2026/18.webp" width="560" height="840" decoding="async" alt="Flatlay — Girls Trinity Black Baggy Track Pant" title="Girls Trinity Black Baggy Track Pant" />
+        <img src="images/flatlay2026/19.webp" width="560" height="840" decoding="async" alt="Flatlay — Davanty Hot Pink Fur Mule" title="Davanty Hot Pink Fur Mule" />
+        <img src="images/flatlay2026/20.webp" width="560" height="840" decoding="async" alt="Flatlay — Lazaro Black Oversized Graphic T-Shirt" title="Lazaro Black Oversized Graphic T-Shirt" />
+        <img src="images/flatlay2026/21.webp" width="560" height="840" decoding="async" alt="Flatlay — Zavien Baby Blue Graphic Hoodie" title="Zavien Baby Blue Graphic Hoodie" />
+        <img src="images/flatlay2026/22.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Dalai Multi Stacked Tapestry Flare Jean" title="Boys Dalai Multi Stacked Tapestry Flare Jean" />
+        <img src="images/flatlay2026/23.webp" width="560" height="840" decoding="async" alt="Flatlay — Girls Brayzie Black T-Shirt Short Set" title="Girls Brayzie Black T-Shirt Short Set" />
+        <img src="images/flatlay2026/24.webp" width="560" height="840" decoding="async" alt="Flatlay — Blaise White Oversized Graphic T-Shirt" title="Blaise White Oversized Graphic T-Shirt" />
         </div>
       </div>
       <div class="flatline__belt flatline__belt--reverse" data-belt>
         <div class="flatline__track">
-        <img src="images/flatlay2026/25.webp" width="560" height="840" decoding="async" alt="Flatlay — Gilrs Vayla White/Purple Graphic T-Shirt" title="Gilrs Vayla White/Purple Graphic T-Shirt" />
-        <img src="images/flatlay2026/26.webp" width="560" height="840" decoding="async" alt="Flatlay — Girls Aze White Graphic T-Shirt" title="Girls Aze White Graphic T-Shirt" />
-        <img src="images/flatlay2026/27.webp" width="560" height="840" decoding="async" alt="Flatlay — Girls Dezz White/Light Wash Long Sleeve T-Shirt Stacked Jean Set" title="Girls Dezz White/Light Wash Long Sleeve T-Shirt Stacked Jean Set" />
-        <img src="images/flatlay2026/28.webp" width="560" height="840" decoding="async" alt="Flatlay — Girls Kairose Light Yellow/Grey Graphic T-Shirt" title="Girls Kairose Light Yellow/Grey Graphic T-Shirt" />
-        <img src="images/flatlay2026/29.webp" width="560" height="840" decoding="async" alt="Flatlay — Girls Maniera Pink/White Zip Up Hoodie Relaxed Pant Track Set" title="Girls Maniera Pink/White Zip Up Hoodie Relaxed Pant Track Set" />
-        <img src="images/flatlay2026/30.webp" width="560" height="840" decoding="async" alt="Flatlay — Girls Rommy Royal Blue Polo" title="Girls Rommy Royal Blue Polo" />
-        <img src="images/flatlay2026/31.webp" width="560" height="840" decoding="async" alt="Flatlay — Girls Vayla Yellow/Royal Graphic T-Shirt" title="Girls Vayla Yellow/Royal Graphic T-Shirt" />
-        <img src="images/flatlay2026/32.webp" width="560" height="840" decoding="async" alt="Flatlay — Gulis Royal Rhinestone Cut Sleeve T-Shirt Short Set" title="Gulis Royal Rhinestone Cut Sleeve T-Shirt Short Set" />
-        <img src="images/flatlay2026/33.webp" width="560" height="840" decoding="async" alt="Flatlay — Izan White Zip Up Short Sleeve Twill Short Set" title="Izan White Zip Up Short Sleeve Twill Short Set" />
-        <img src="images/flatlay2026/34.webp" width="560" height="840" decoding="async" alt="Flatlay — Kamari Dark Blue Rhinestone Stacked Fit Jean" title="Kamari Dark Blue Rhinestone Stacked Fit Jean" />
-        <img src="images/flatlay2026/35.webp" width="560" height="840" decoding="async" alt="Flatlay — Lake Black/Pink Graphic Slides" title="Lake Black/Pink Graphic Slides" />
-        <img src="images/flatlay2026/36.webp" width="560" height="840" decoding="async" alt="Flatlay — Leslaw White Graphic Slides" title="Leslaw White Graphic Slides" />
-        <img src="images/flatlay2026/37.webp" width="560" height="840" decoding="async" alt="Flatlay — Marzion Black Graphic Hoodie" title="Marzion Black Graphic Hoodie" />
-        <img src="images/flatlay2026/38.webp" width="560" height="840" decoding="async" alt="Flatlay — Montae Black Oversized Graphic T-Shirt" title="Montae Black Oversized Graphic T-Shirt" />
-        <img src="images/flatlay2026/39.webp" width="560" height="840" decoding="async" alt="Flatlay — Olivier Dark Grey Patch Rhinestone Denim Jacket/Stacked Flare Jean Set" title="Olivier Dark Grey Patch Rhinestone Denim Jacket/Stacked Flare Jean Set" />
-        <img src="images/flatlay2026/40.webp" width="560" height="840" decoding="async" alt="Flatlay — Racing Grung Black Graphic Cut Sleeve T-Shirt Short Set" title="Racing Grung Black Graphic Cut Sleeve T-Shirt Short Set" />
-        <img src="images/flatlay2026/41.webp" width="560" height="840" decoding="async" alt="Flatlay — Renia Black Denim Jort" title="Renia Black Denim Jort" />
-        <img src="images/flatlay2026/42.webp" width="560" height="840" decoding="async" alt="Flatlay — Santos Heather Grey Graphic Hoodie" title="Santos Heather Grey Graphic Hoodie" />
-        <img src="images/flatlay2026/43.webp" width="560" height="840" decoding="async" alt="Flatlay — Semental Faded Camo Rhinestone Jort" title="Semental Faded Camo Rhinestone Jort" />
-        <img src="images/flatlay2026/44.webp" width="560" height="840" decoding="async" alt="Flatlay — Sharae Pink Cheetah Baby Tee Shirt" title="Sharae Pink Cheetah Baby Tee Shirt" />
-        <img src="images/flatlay2026/45.webp" width="560" height="840" decoding="async" alt="Flatlay — States Purple Graphic Hoodie" title="States Purple Graphic Hoodie" />
-        <img src="images/flatlay2026/46.webp" width="560" height="840" decoding="async" alt="Flatlay — Torq Black/Orange Graphic Hoodie" title="Torq Black/Orange Graphic Hoodie" />
-        <img src="images/flatlay2026/47.webp" width="560" height="840" decoding="async" alt="Flatlay — Verseney Black Polo Shirt" title="Verseney Black Polo Shirt" />
-        <img src="images/flatlay2026/48.webp" width="560" height="840" decoding="async" alt="Flatlay — Womens Firewalk Pink Suede Mule" title="Womens Firewalk Pink Suede Mule" />
+        <img src="images/flatlay2026/25.webp" width="560" height="840" decoding="async" alt="Flatlay — Tariqa Black/Pink Long Sleeve Dress" title="Tariqa Black/Pink Long Sleeve Dress" />
+        <img src="images/flatlay2026/26.webp" width="560" height="840" decoding="async" alt="Flatlay — Kanne Royal Blue Hoodie/Stacked Flare Pant Track Set" title="Kanne Royal Blue Hoodie/Stacked Flare Pant Track Set" />
+        <img src="images/flatlay2026/27.webp" width="560" height="840" decoding="async" alt="Flatlay — Nayse Black Denim Jort" title="Nayse Black Denim Jort" />
+        <img src="images/flatlay2026/28.webp" width="560" height="840" decoding="async" alt="Flatlay — Girls Tyca Light Blue Graphic Hoodie" title="Girls Tyca Light Blue Graphic Hoodie" />
+        <img src="images/flatlay2026/29.webp" width="560" height="840" decoding="async" alt="Flatlay — Totanika Grey Grommet Tank Top" title="Totanika Grey Grommet Tank Top" />
+        <img src="images/flatlay2026/30.webp" width="560" height="840" decoding="async" alt="Flatlay — Girls Jermika Pink Oversized Varsity Jacket" title="Girls Jermika Pink Oversized Varsity Jacket" />
+        <img src="images/flatlay2026/31.webp" width="560" height="840" decoding="async" alt="Flatlay — Girls Ajayla Pink Double Waisted Baggy Track Pant" title="Girls Ajayla Pink Double Waisted Baggy Track Pant" />
+        <img src="images/flatlay2026/32.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Jett Navy/Multi Graphic T-Shirt Stacked Jean Set" title="Boys Jett Navy/Multi Graphic T-Shirt Stacked Jean Set" />
+        <img src="images/flatlay2026/33.webp" width="560" height="840" decoding="async" alt="Flatlay — Mens Yehuda Brown Pearl Mule" title="Mens Yehuda Brown Pearl Mule" />
+        <img src="images/flatlay2026/34.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Zayven Tint Blue Baggy Fit Jean" title="Boys Zayven Tint Blue Baggy Fit Jean" />
+        <img src="images/flatlay2026/35.webp" width="560" height="840" decoding="async" alt="Flatlay — Fuston Charcoal Oversized Graphic T-Shirt" title="Fuston Charcoal Oversized Graphic T-Shirt" />
+        <img src="images/flatlay2026/36.webp" width="560" height="840" decoding="async" alt="Flatlay — Girls Hanifa Chocolate Zip Up Hoodie Relaxed Pant Track Set" title="Girls Hanifa Chocolate Zip Up Hoodie Relaxed Pant Track Set" />
+        <img src="images/flatlay2026/37.webp" width="560" height="840" decoding="async" alt="Flatlay — Yarden Black Graphic Hoodie" title="Yarden Black Graphic Hoodie" />
+        <img src="images/flatlay2026/38.webp" width="560" height="840" decoding="async" alt="Flatlay — Girls Dolli Pink Bucket Hat" title="Girls Dolli Pink Bucket Hat" />
+        <img src="images/flatlay2026/39.webp" width="560" height="840" decoding="async" alt="Flatlay — Shepard Camo Cargo Skinny Fit Jean" title="Shepard Camo Cargo Skinny Fit Jean" />
+        <img src="images/flatlay2026/40.webp" width="560" height="840" decoding="async" alt="Flatlay — Bracken Dark Grey 3/4 Sleeve Boxy Crop Tee" title="Bracken Dark Grey 3/4 Sleeve Boxy Crop Tee" />
+        <img src="images/flatlay2026/41.webp" width="560" height="840" decoding="async" alt="Flatlay — Girls Basiliskie White/Red T-Shirt Rhinestone Jean Set" title="Girls Basiliskie White/Red T-Shirt Rhinestone Jean Set" />
+        <img src="images/flatlay2026/42.webp" width="560" height="840" decoding="async" alt="Flatlay — Brennin Olive Varsity Jacket" title="Brennin Olive Varsity Jacket" />
+        <img src="images/flatlay2026/43.webp" width="560" height="840" decoding="async" alt="Flatlay — Cheronnie Black Cargo Stacked Track Pant" title="Cheronnie Black Cargo Stacked Track Pant" />
+        <img src="images/flatlay2026/44.webp" width="560" height="840" decoding="async" alt="Flatlay — Mens Promet Blue Mule" title="Mens Promet Blue Mule" />
+        <img src="images/flatlay2026/45.webp" width="560" height="840" decoding="async" alt="Flatlay — Alvina Pink Rhinestone Zip Up Hoodie" title="Alvina Pink Rhinestone Zip Up Hoodie" />
+        <img src="images/flatlay2026/46.webp" width="560" height="840" decoding="async" alt="Flatlay — Lykes Light Blue Super Flare Jeans" title="Lykes Light Blue Super Flare Jeans" />
+        <img src="images/flatlay2026/47.webp" width="560" height="840" decoding="async" alt="Flatlay — Boys Leif White Graphic T-Shirt" title="Boys Leif White Graphic T-Shirt" />
+        <img src="images/flatlay2026/48.webp" width="560" height="840" decoding="async" alt="Flatlay — Xandria Black Graphic Baggy Fit Track Set" title="Xandria Black Graphic Baggy Fit Track Set" />
         </div>
       </div>
     </div>
@@ -171,10 +180,10 @@
       <p>Macro cleanup and shine control where a half-pixel of dust reads on screen.</p>
     </div>
     <div class="grid grid--4">
-      <figure class="tile" tabindex="0"><img loading="lazy" src="images/jewelry/jewelry1.webp" alt="Jewelry retouching" /><figcaption>Jewelry</figcaption></figure>
-      <figure class="tile" tabindex="0"><img loading="lazy" src="images/jewelry/jewelry2.webp" alt="Jewelry retouching" /><figcaption>Jewelry</figcaption></figure>
-      <figure class="tile" tabindex="0"><img loading="lazy" src="images/jewelry/jewelry3.webp" alt="Jewelry retouching" /><figcaption>Jewelry</figcaption></figure>
-      <figure class="tile" tabindex="0"><img loading="lazy" src="images/jewelry/jewelry4.webp" alt="Jewelry retouching" /><figcaption>Jewelry</figcaption></figure>
+      <figure class="tile" tabindex="0"><img loading="lazy" src="images/jewelry/jewelry1.webp" alt="Silver ridged drop earrings on white" /><figcaption>Jewelry</figcaption></figure>
+      <figure class="tile" tabindex="0"><img loading="lazy" src="images/jewelry/jewelry2.webp" alt="Close-up of silver ridged drop earrings — cleaned metal and controlled highlights" /><figcaption>Jewelry</figcaption></figure>
+      <figure class="tile" tabindex="0"><img loading="lazy" src="images/jewelry/jewelry3.webp" alt="Gold snake chain necklace with butterfly pendant" /><figcaption>Jewelry</figcaption></figure>
+      <figure class="tile" tabindex="0"><img loading="lazy" src="images/jewelry/jewelry4.webp" alt="Macro of gold butterfly pendant on snake chain" /><figcaption>Jewelry</figcaption></figure>
     </div>
   </div>
 
@@ -212,18 +221,49 @@
       <span class="ba__tag ba__tag--after">After</span>
     </div>
     <div class="ba reveal" data-ba>
-      <img class="ba__after" src="images/after3.webp" alt="After retouching" draggable="false" />
-      <img class="ba__before" src="images/before3.webp" alt="Before retouching" draggable="false" />
+      <img class="ba__after" src="images/after3.webp" alt="After retouching — model in a pink zip-up and shorts on a lilac backdrop" draggable="false" />
+      <img class="ba__before" src="images/before3.webp" alt="Before retouching — raw capture" draggable="false" />
       <div class="ba__handle" role="slider" aria-label="Comparison slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"><span></span></div>
       <span class="ba__tag ba__tag--before">Before</span>
       <span class="ba__tag ba__tag--after">After</span>
     </div>
     <div class="ba reveal" data-ba>
-      <img class="ba__after" src="images/after4.webp" alt="After retouching" draggable="false" />
-      <img class="ba__before" src="images/before4.webp" alt="Before retouching" draggable="false" />
+      <img class="ba__after" src="images/after4.webp" alt="After retouching — model in a grey hoodie on an orange backdrop" draggable="false" />
+      <img class="ba__before" src="images/before4.webp" alt="Before retouching — raw capture" draggable="false" />
       <div class="ba__handle" role="slider" aria-label="Comparison slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"><span></span></div>
       <span class="ba__tag ba__tag--before">Before</span>
       <span class="ba__tag ba__tag--after">After</span>
+    </div>
+  </div>
+
+  <!-- On-model pairs: untouched camera original (_EDITORIAL) aligned to the delivered final -->
+  <div class="work-group" style="margin-top: 3.5rem;">
+    <div class="work-group__head reveal">
+      <h3>On-model<span class="accent">.</span></h3>
+      <p>Untouched camera original against the delivered final — garment cleanup, lint and crease control, tone and color corrected to product.</p>
+    </div>
+    <div class="ba-grid ba-grid--3">
+      <div class="ba reveal" data-ba>
+        <img class="ba__after" loading="lazy" src="images/model-ba/langston_after.webp" alt="Delivered final — model in a beige fur-hood puffer jacket, grey knit hoodie and straight fit jeans" draggable="false" />
+        <img class="ba__before" loading="lazy" src="images/model-ba/langston_before.webp" alt="Untouched camera original of the same frame" draggable="false" />
+        <div class="ba__handle" role="slider" aria-label="Comparison slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"><span></span></div>
+        <span class="ba__tag ba__tag--before">Original</span>
+        <span class="ba__tag ba__tag--after">Delivered</span>
+      </div>
+      <div class="ba reveal" data-ba>
+        <img class="ba__after" loading="lazy" src="images/model-ba/stori_after.webp" alt="Delivered final — model in a navy rhinestone graphic hoodie and dark grey baggy jeans, holding a skateboard" draggable="false" />
+        <img class="ba__before" loading="lazy" src="images/model-ba/stori_before.webp" alt="Untouched camera original of the same frame" draggable="false" />
+        <div class="ba__handle" role="slider" aria-label="Comparison slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"><span></span></div>
+        <span class="ba__tag ba__tag--before">Original</span>
+        <span class="ba__tag ba__tag--after">Delivered</span>
+      </div>
+      <div class="ba reveal" data-ba>
+        <img class="ba__after" loading="lazy" src="images/model-ba/hanif_after.webp" alt="Delivered final — model in a black graphic zip up hoodie and black baggy jeans" draggable="false" />
+        <img class="ba__before" loading="lazy" src="images/model-ba/hanif_before.webp" alt="Untouched camera original of the same frame" draggable="false" />
+        <div class="ba__handle" role="slider" aria-label="Comparison slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"><span></span></div>
+        <span class="ba__tag ba__tag--before">Original</span>
+        <span class="ba__tag ba__tag--after">Delivered</span>
+      </div>
     </div>
   </div>
 
@@ -408,9 +448,9 @@
     </div>
   </div>
 
-  <p class="aigen__note reveal"><strong>Case study — golf capsule concept:</strong> built for the brand's
-     real clothing line. AI-generated talent and location for creative inspiration; hand-retouched,
-     color-graded finals. Concept to campaign-ready imagery — before a single course is booked.</p>
+  <p class="aigen__note reveal"><strong>Case study — golf capsule concept:</strong> built around the brand's
+     real clothing line. Talent and location are AI-generated as a creative pitch; every final is
+     retouched and color-graded by hand.</p>
 </section>
 
 <!-- ====== SYSTEMS / CASE STUDY TEASER ====== -->
@@ -446,7 +486,6 @@
            QC'd to the same bar before it ships.</p>
       </div>
     </div>
-    <p class="systems__more reveal">Full case study — coming soon.</p>
   </div>
 </section>
 
